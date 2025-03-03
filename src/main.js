@@ -36,13 +36,11 @@ const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.inner
 scene.background = new THREE.Color( 0x1E201E ); //3C3D37
 camera.position.z = 5;
 
-const box = new THREE.BoxGeometry(1,1,1);
-
 const loader = new GLTFLoader();
 let modelC;
 let modelG;
 
-loader.load('/Assets/C.glb', (gltf) => {
+loader.load('/public/Assets/C.glb', (gltf) => {
     modelC = gltf.scene;
 
     // Change Material for Each Mesh in Model
@@ -66,7 +64,7 @@ loader.load('/Assets/C.glb', (gltf) => {
 
 });
 
-loader.load('/Assets/G.glb', (gltf) => {
+loader.load('/public/Assets/G.glb', (gltf) => {
     modelG = gltf.scene;
 
     modelG.traverse((child) => {
@@ -80,6 +78,19 @@ loader.load('/Assets/G.glb', (gltf) => {
     modelG.position.y = -2;
     modelG.scale.set(3,3,3);
 });
+
+
+const box1 = new THREE.BoxGeometry(1,1,1);
+const box2 = new THREE.BoxGeometry(1,1,1);
+const material = new THREE.MeshBasicMaterial( { color: 0x6c3 } );
+const cube1 = new THREE.Mesh( box1, material );
+const cube2 = new THREE.Mesh( box1, material );
+scene.add( cube1 );
+// scene.add( cube2 );
+
+cube1.position.x = -5;
+cube1.position.y = -10;
+
 
 const container = document.querySelector('.three-container'); 
 const renderer = new THREE.WebGLRenderer({
@@ -112,18 +123,25 @@ const renderloop = () => {
 	const delta = currentTime - previousTime
 	previousTime = currentTime
 
-    camera.position.z -= scrollSpeed * delta * 40; // Frame-rate independent movement
-    camera.position.z = Math.max(-1, Math.min(camera.position.z, 5));
+    // camera.position.z -= scrollSpeed * delta * 5; // Frame-rate independent movement
+    // camera.position.z = Math.max(-1, Math.min(camera.position.z, 5));
+
+    cube1.position.y += scrollSpeed * delta * 20;
+    cube1.position.y = Math.max(-10, Math.min(cube1.position.y, 0));
 
     if (modelC) {
-        modelC.position.x += scrollSpeed * delta * -30; 
+        modelC.position.x += scrollSpeed * delta * -10;
         modelC.position.x = Math.max(-100, Math.min(modelC.position.x, -2));
+        modelC.position.z += scrollSpeed * delta * 10;
+        modelC.position.z = Math.max( 1, Math.min(modelC.position.z, 10));
         // modelC.rotation.y += scrollSpeed * delta * -40;
 
     }
     if (modelG) {
-        modelG.position.x += scrollSpeed * delta * 30; 
+        modelG.position.x += scrollSpeed * delta * 10; 
         modelG.position.x = Math.max( -1.8, Math.min(modelG.position.x, 100));
+        modelG.position.z += scrollSpeed * delta * 10;
+        modelG.position.z = Math.max( 1, Math.min(modelG.position.z, 10));
         // modelC.rotation.y += scrollSpeed * delta * -40;
 
     }
