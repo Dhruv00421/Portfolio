@@ -1,4 +1,6 @@
 import './style.css'
+import CModel from '/public/Assets/C.glb';
+import GModel from '/public/Assets/G.glb';
 
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
@@ -40,7 +42,7 @@ const loader = new GLTFLoader();
 let modelC;
 let modelG;
 
-loader.load('/public/Assets/C.glb', (gltf) => {
+loader.load( CModel, (gltf) => {
     modelC = gltf.scene;
 
     // Change Material for Each Mesh in Model
@@ -64,7 +66,7 @@ loader.load('/public/Assets/C.glb', (gltf) => {
 
 });
 
-loader.load('/public/Assets/G.glb', (gltf) => {
+loader.load(GModel, (gltf) => {
     modelG = gltf.scene;
 
     modelG.traverse((child) => {
