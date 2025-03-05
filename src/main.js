@@ -72,22 +72,22 @@ manager.onLoad = function ( ) {
     }, remainingTime * 1000);
 };
 
-manager.onProgress = function ( url, itemsLoaded, itemsTotal ) {
-	console.log( 'Loading file: ' + url + '.\nLoaded ' + itemsLoaded + ' of ' + itemsTotal + ' files.' );
+// manager.onProgress = function ( url, itemsLoaded, itemsTotal ) {
+// 	// console.log( 'Loading file: ' + url + '.\nLoaded ' + itemsLoaded + ' of ' + itemsTotal + ' files.' );
 
-    // let progress = (itemsLoaded / itemsTotal) * 100;
-    // progressBar.style.width = progress + "%"; // Update width
-    // progressBar.innerText = Math.round(progress) + "%"; // Optional: Show text
+//     // let progress = (itemsLoaded / itemsTotal) * 100;
+//     // progressBar.style.width = progress + "%"; // Update width
+//     // progressBar.innerText = Math.round(progress) + "%"; // Optional: Show text
 
 
-    // const progress = (itemsLoaded / itemsTotal) * 100;
-    // console.log(`Loading file: ${url}.\nLoaded ${itemsLoaded} of ${itemsTotal} files. (${progress.toFixed(2)}%)`);
+//     // const progress = (itemsLoaded / itemsTotal) * 100;
+//     // console.log(`Loading file: ${url}.\nLoaded ${itemsLoaded} of ${itemsTotal} files. (${progress.toFixed(2)}%)`);
 
-    // Move the camera when loading reaches 90%
-    // if (progress >= 90) {
-    //     moveCameraSmoothly(camera, new THREE.Vector3(0, 0, -6), 1.5); // Move over 1.5 seconds
-    // }
-};
+//     // Move the camera when loading reaches 90%
+//     // if (progress >= 90) {
+//     //     moveCameraSmoothly(camera, new THREE.Vector3(0, 0, -6), 1.5); // Move over 1.5 seconds
+//     // }
+// };
 
 manager.onError = function ( url ) {
 	console.log( 'There was an error loading ' + url );
@@ -223,32 +223,12 @@ const renderloop = () => {
     if (modelC) {
         modelC.position.y += delta * -10;
         modelC.position.y = Math.max( -2, Math.min(modelC.position.y, 7));
-        // if(modelC.position.y == -2){
-        //     modelC.position.x += delta * -xspeed;
-        //     modelC.position.x = Math.max(-100, Math.min(modelC.position.x, -2));
-        //     modelC.position.z += delta * zspeed;
-        //     modelC.position.z = Math.max( 1, Math.min(modelC.position.z, 10));
-        // }
-        // modelC.rotation.y += scrollSpeed * delta * -40;
-        if(modelC.position.y == -2){
-            toZoom = true;
-        }
 
     }
     if (modelG) {
         modelG.position.y += delta * -10;
         modelG.position.y = Math.max( -2, Math.min(modelG.position.y, 7));
-
-        if(modelG.position.y == -2)
-        {
-            toZoom = true;
-        }
-
     }
-
-    // if(toZoom){
-    //     camera.position.z += delta * -5;
-    // }
 
     renderer.render(scene, camera)	
 	window.requestAnimationFrame(renderloop)
@@ -256,18 +236,6 @@ const renderloop = () => {
 
 renderloop()
 
-// window.addEventListener("load", function () {
-//   let loadingScreen = document.getElementById("loading-screen");
-
-//   loadingScreen.style.display = "flex";
-//   void loadingScreen.offsetWidth;
-//   loadingScreen.style.opacity = "0";
-
-//     setTimeout(() => {
-     
-//         loadingScreen.style.display = "none";
-//     }, 1000); // Matches CSS transition duration
-// });
 
 
 
