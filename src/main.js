@@ -14,7 +14,14 @@ document.querySelector('#app').innerHTML = `
         <div class="entry">
             <nav>
                 <h1 class="name">CG Craft</h1>
+                <ul class = "menu">
+                    <li> About </li>
+                    <li> Contact </li>
+                </ul>
             </nav>
+            <div class = "info">
+               I am Dhruv
+            </div>
         </div>
     </div>
 `
@@ -236,7 +243,7 @@ function startMainScene(){
     // renderer.domElement.style.display = "none";
     
     const scene_1 = new THREE.Scene();
-    scene_1.background = new THREE.Color(0x1a1a1a);  // Dark gray background
+    scene_1.background = new THREE.Color(0xB4EBE6);  // Dark gray background
     
     const camera_1 = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     const directionalLight = new THREE.DirectionalLight(0xffffff, 1.0);
@@ -249,6 +256,7 @@ function startMainScene(){
 
     camera_1.position.z = 5;
 
+    // container
     const container_1 = document.querySelector('.three-container'); 
     const renderer_1 = new THREE.WebGLRenderer({
         antialias: true
@@ -256,16 +264,21 @@ function startMainScene(){
     renderer_1.setSize(window.innerWidth, window.innerHeight);
     container_1.appendChild(renderer_1.domElement);
 
+
+    // event listner for window size
     window.addEventListener('resize', () => {
         camera_1.aspect = window.innerWidth/window.innerHeight;
         camera_1.updateProjectionMatrix();
         renderer_1.setSize(window.innerWidth, window.innerHeight);
     });
 
+    // create model
     const box1 = new THREE.BoxGeometry(1, 1, 1);
     const material = new THREE.MeshPhongMaterial({ color: 0xdddddd });
     const cube1 = new THREE.Mesh(box1, material);
     scene_1.add(cube1);
+
+    cube1.position.y = 4.4;
 
     let scrollSpeed = 0;
 
@@ -276,11 +289,18 @@ function startMainScene(){
     const clock = new THREE.Clock();
     let previousTime = 0;
 
+    // start rendering
     const renderloop_1 = () => {
         const currentTime = clock.getElapsedTime();
         const delta = currentTime - previousTime;
         previousTime = currentTime;
 
+        cube1.position.y += delta * -7;
+        cube1.position.y = Math.max( -1, Math.min(cube1.position.y, 4.4));
+
+        if(cube1.position.y != -1){
+            cube1.rotation.y += delta * 4;
+        }
         
         // Reset scroll speed each frame for smooth movement
         scrollSpeed *= 0.95;
