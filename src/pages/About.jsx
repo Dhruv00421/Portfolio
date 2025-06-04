@@ -15,7 +15,6 @@ import unreal from '../assets/Icons/Unreal.svg';
 import vscode from '../assets/Icons/VScode.svg';
 import visualStudio from '../assets/Icons/VisualStudio.svg';
 import git from '../assets/Icons/Git.svg';
-import github from '../assets/Icons/Github.svg';
 import flax from '../assets/Icons/Flax.svg';
 
 
