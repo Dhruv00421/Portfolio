@@ -85,7 +85,7 @@ export default function ContactPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center px-4 py-8 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center px-4 py-8 sm:px-6 lg:px-8 mt-11">
       <div className="max-w-2xl w-full">
         {/* Header Section */}
         <div className="text-center mb-8 sm:mb-12">

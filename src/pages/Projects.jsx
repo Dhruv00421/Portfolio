@@ -479,7 +479,7 @@ const Projects = () => {
     : projects.filter(project => project.category === selectedCategory);
 
   return (
-    <section ref={containerRef} className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 py-20 px-6 relative overflow-hidden">
+    <section ref={containerRef} className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 py-20 px-6 mt-3 relative overflow-hidden">
       <motion.div
         className="absolute inset-0 opacity-10"
         style={{ y: backgroundY }}
