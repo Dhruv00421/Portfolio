@@ -208,57 +208,39 @@ const Cube = ({
           />
         </a.mesh>
         <group name="Cylinder001" position={[0, 0.074, 0]} > // position={[1.556, 0.074, 2.546]}
-          {/* <mesh
-              // name="Plane"
-              // castShadow
-              // receiveShadow
-              rotation={[-Math.PI / 2, 0, 0]} 
-              position={[0, 0, 0]}
-            >
-              <planeGeometry args={[10, 10, 5, 2]} />
-              <meshPhysicalMaterial
-                color="#110e15"
-                metalness={1}
-                roughness={0.1}
-                // emissive="#110e15"
-                // emissiveIntensity={0.4}
-                clearcoat={1}
-                clearcoatRoughness={0}
-              />
-            </mesh> */}
-            <mesh
-              name="Cylinder001_1"
-              castShadow
-              receiveShadow
-              geometry={nodes.Cylinder001_1.geometry}
-              
-              material={materials.Material}
-            >
-              <meshPhysicalMaterial
-                color="#1A202C"
-                metalness={1}
-                roughness={0.1}
-                clearcoat={1}
-                clearcoatRoughness={0}
-              />
-            </mesh>
-            <mesh
-              name="Cylinder001_2"
-              castShadow
-              receiveShadow
-              geometry={nodes.Cylinder001_2.geometry}
-              material={materials.Glow}
-            >
-              <meshPhysicalMaterial
-                color= "#1A202C"
-                metalness={1}
-                roughness={0.1}
-                emissive="#1A202C"
-                emissiveIntensity={1}
-                clearcoat={1}
-                clearcoatRoughness={0}
-              />
-            </mesh>
+          <mesh
+            name="Cylinder001_1"
+            castShadow
+            receiveShadow
+            geometry={nodes.Cylinder001_1.geometry}
+            
+            material={materials.Material}
+          >
+            <meshPhysicalMaterial
+              color="#1A202C"
+              metalness={1}
+              roughness={0.1}
+              clearcoat={1}
+              clearcoatRoughness={0}
+            />
+          </mesh>
+          <mesh
+            name="Cylinder001_2"
+            castShadow
+            receiveShadow
+            geometry={nodes.Cylinder001_2.geometry}
+            material={materials.Glow}
+          >
+            <meshPhysicalMaterial
+              color= "#1A202C"
+              metalness={1}
+              roughness={0.1}
+              emissive="#1A202C"
+              emissiveIntensity={1}
+              clearcoat={1}
+              clearcoatRoughness={0}
+            />
+          </mesh>
         </group>
       </group>
     </a.group>

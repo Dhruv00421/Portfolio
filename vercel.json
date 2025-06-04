@@ -4,5 +4,11 @@
       "source": "/(.*)",
       "destination": "/index.html"
     }
+  ],
+  "routes": [
+    {
+      "src": "/3DModels/(.*)",
+      "dest": "/3DModels/$1"
+    }
   ]
 }
