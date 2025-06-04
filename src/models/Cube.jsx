@@ -9,7 +9,6 @@ import { useGLTF, useAnimations, Plane } from '@react-three/drei'
 import { a, useSpring } from '@react-spring/three'
 // import { GLTF } from 'three-stdlib'
 
-const cubeModel = '/3DModels/Cube_Model.glb';
 
 
 const Cube = ({
@@ -25,7 +24,7 @@ const Cube = ({
   
   const {gl, viewport} = useThree();
   
-  const { nodes, materials, animations } = useGLTF(cubeModel)
+  const { nodes, materials, animations } = useGLTF("https://res.cloudinary.com/dthacqaj3/image/upload/v1749029458/Cube_Model_bkndif.glb")
   const { actions } = useAnimations(animations, cubeRef)
 
   const lastX = useRef(0);
