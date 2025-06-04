@@ -17,7 +17,7 @@ import { battleArenaMain, battleArena1, battleArena2 } from '../assets/Images';
 import { cubeSceneMain, cubeScene1, cubeScene2, cubeScene3, cubeScene4, cubeScene5, cubeScene6 } from '../assets/Images';
 import { petrolSceneMain, petrolScene1, petrolScene2, petrolScene3, petrolScene4, petrolScene5 } from '../assets/Images';
 import { ruinsSceneMain, ruinsScene1, ruinsScene2, ruinsScene3, ruinsScene4 } from '../assets/Images';
-import { templeSceneMain, templeScene1, templeScene3, templeScene4, templeScene5, templeScene6, templeScene7 } from '../assets/Images';
+import { templeSceneMain, templeScene1, templeScene2, templeScene3, templeScene4, templeScene5, templeScene6, templeScene7 } from '../assets/Images';
 import { luminaraSceneMain, luminaraScene1, luminaraScene2, luminaraScene4 } from '../assets/Images';
 
 // 3D models
@@ -171,7 +171,7 @@ const projects = [
     images: [
       templeSceneMain,
       templeScene1,
-      // templeScene2,
+      templeScene2,
       templeScene3,
       templeScene4,
       templeScene5,
