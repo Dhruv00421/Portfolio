@@ -1,7 +1,6 @@
 import React, { useRef, useMemo, useEffect, useState } from 'react'
 import { useFrame, useThree } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
-import cubeModel from '../assets/3D/Cube_Model.glb'
 import * as THREE from 'three'
 
 const FloatingCubes = ({
@@ -12,7 +11,6 @@ const FloatingCubes = ({
 }) => {
   const group = useRef()
   const { gl } = useThree()
-  const { nodes } = useGLTF(cubeModel)
 
   const cubes = useMemo(() => {
     return new Array(count).fill().map((_, i) => ({
