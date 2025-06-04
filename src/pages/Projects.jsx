@@ -10,30 +10,32 @@ import linkedin from '../assets/Icons/Linkedin1.svg'
 
 // projects img
 // 3D environments
-import { animeSceneMain, animeScene1, animeScene2, animeScene3, animeScene4, animeScene5 } from '../assets/Images';
-import { winterWonderlandMain, winterWonderland1, winterWonderland2, winterWonderland3 } from '../assets/Images';
-import { moonLandscapeMain, moonLandscape1, moonLandscape2, moonLandscape3, moonLandscape4, moonLandscape5 } from '../assets/Images';
-import { battleArenaMain, battleArena1, battleArena2 } from '../assets/Images';
-import { cubeSceneMain, cubeScene1, cubeScene2, cubeScene3, cubeScene4, cubeScene5, cubeScene6 } from '../assets/Images';
-import { petrolSceneMain, petrolScene1, petrolScene2, petrolScene3, petrolScene4, petrolScene5 } from '../assets/Images';
-import { ruinsSceneMain, ruinsScene1, ruinsScene2, ruinsScene3, ruinsScene4 } from '../assets/Images';
-import { templeSceneMain, templeScene1, templeScene2, templeScene3, templeScene4, templeScene5, templeScene6, templeScene7 } from '../assets/Images';
-import { luminaraSceneMain, luminaraScene1, luminaraScene2, luminaraScene4 } from '../assets/Images';
+// import { animeSceneMain, animeScene1, animeScene2, animeScene3, animeScene4, animeScene5 } from '../assets/Images';
+// import { winterWonderlandMain, winterWonderland1, winterWonderland2, winterWonderland3 } from '../assets/Images';
+// import { moonLandscapeMain, moonLandscape1, moonLandscape2, moonLandscape3, moonLandscape4, moonLandscape5 } from '../assets/Images';
+// import { battleArenaMain, battleArena1, battleArena2 } from '../assets/Images';
+// import { cubeSceneMain, cubeScene1, cubeScene2, cubeScene3, cubeScene4, cubeScene5, cubeScene6 } from '../assets/Images';
+// import { petrolSceneMain, petrolScene1, petrolScene2, petrolScene3, petrolScene4, petrolScene5 } from '../assets/Images';
+// import { ruinsSceneMain, ruinsScene1, ruinsScene2, ruinsScene3, ruinsScene4 } from '../assets/Images';
+// import { templeSceneMain, templeScene1, templeScene2, templeScene3, templeScene4, templeScene5, templeScene6, templeScene7 } from '../assets/Images';
+// import { luminaraSceneMain, luminaraScene1, luminaraScene2, luminaraScene4 } from '../assets/Images';
 
-// 3D models
-import { swordMain, swordworkbench } from '../assets/Images';
-import { arcMain, arcworkbench } from '../assets/Images';
-import { gunMain, gun1, gun2 } from '../assets/Images';
-import { robotArmMain } from '../assets/Images';
-import { storageBoxMain, storageBox1, storageBox2 } from '../assets/Images';
-import { machineGunMain, machineGun1, machineGun2, machineGun3, machineGun4 } from '../assets/Images';
-import { saregamaMain, saregama1, saregama2, saregama3 } from '../assets/Images';
-import { assaultMain, assault1, assault2 } from '../assets/Images';
-import { robotMain, robot1, robot2, robot3 } from '../assets/Images';
+// // 3D models
+// import { swordMain, swordworkbench } from '../assets/Images';
+// import { arcMain, arcworkbench } from '../assets/Images';
+// import { gunMain, gun1, gun2 } from '../assets/Images';
+// import { robotArmMain } from '../assets/Images';
+// import { storageBoxMain, storageBox1, storageBox2 } from '../assets/Images';
+// import { machineGunMain, machineGun1, machineGun2, machineGun3, machineGun4 } from '../assets/Images';
+// import { saregamaMain, saregama1, saregama2, saregama3 } from '../assets/Images';
+// import { assaultMain, assault1, assault2 } from '../assets/Images';
+// import { robotMain, robot1, robot2, robot3 } from '../assets/Images';
 
-// Games
-import { pingPongBall } from '../assets/Images';
-import { knightGameMain } from '../assets/Images';
+// // Games
+// import { pingPongBall } from '../assets/Images';
+// import { knightGameMain } from '../assets/Images';
+
+//environments
 
 
 const projects = [
@@ -42,17 +44,17 @@ const projects = [
     title: "Anime Style Scene",
     category: "3D Environment",
     description: "This is my first scene in blender, inspired by anime aesthetics. I made different scenes before this one, but this is the first perfectly finished.",
-    image: animeSceneMain,
+    image: "/Images/Environment/Anime_style/animeScene.png",
     images: [
-      animeSceneMain,
-      animeScene1,
-      animeScene2,
-      animeScene3,
-      animeScene4,
-      animeScene5,
+      "/Images/Environment/Anime_style/animeScene.png",
+      "/Images/Environment/Anime_style/animeScene2.png",
+      "/Images/Environment/Anime_style/animeScene3.png",
+      "/Images/Environment/Anime_style/Scene1.png",
+      "/Images/Environment/Anime_style/scene2.png",
+      "/Images/Environment/Anime_style/animesceneworkbench.png",
     ],
     technologies: ["Blender", "Evee Engine"],
-    type: "3D art",
+    type: "3D Art",
     links: {
       demo: "#",
       github: "#",
@@ -64,12 +66,12 @@ const projects = [
     title: "Winter Wonderland Scene",
     category: "3D Environment",
     description: "This scene I made for the winter wonderland challenge which host by kaizen (a wellknown youtuber). It features a castle in the middle of a snowy landscape with a snow flakes.",
-    image: winterWonderlandMain,
+    image: "/Images/Environment/Winter_wonderland/winterwonder.png",
     images: [
-      winterWonderlandMain,
-      winterWonderland1,
-      winterWonderland2,
-      winterWonderland3,
+      "/Images/Environment/Winter_wonderland/winterwonder.png",
+      "/Images/Environment/Winter_wonderland/wintercastle.png",
+      "/Images/Environment/Winter_wonderland/wintercastleworkrandom.png",
+      "/Images/Environment/Winter_wonderland/wintercastlework.png",
     ],
     technologies: ["Blender", "Cycle Engine", "Evee Engine"  ],
     type: "3D Art",
@@ -84,14 +86,14 @@ const projects = [
     title: "Lunar Landscape",
     category: "3D Environment",
     description: "This is another scene I created for the Kaizen Challenge, featuring a lunar landscape theme. This project helped me deepen my understanding of lighting and terrain creation.",
-    image: moonLandscapeMain,
+    image: '/Images/Environment/Moon_Landscape/Moon_landscape4k.png',
     images: [
-      moonLandscapeMain,
-      moonLandscape1,
-      moonLandscape2,
-      moonLandscape3,
-      moonLandscape4,
-      moonLandscape5,
+      "/Images/Environment/Moon_Landscape/Moon_landscape4k.png",
+      "/Images/Environment/Moon_Landscape/Moonlandscape.jpg",
+      "/Images/Environment/Moon_Landscape/moon8k.jpg",
+      "/Images/Environment/Moon_Landscape/Moon4_Compo.png",
+      "/Images/Environment/Moon_Landscape/Moon_workbench.png",
+      "/Images/Environment/Moon_Landscape/moon8k_Clay.jpg",
     ],
     technologies: ["Blender", "Cycle Engine"],
     type: "3D Art",
@@ -105,11 +107,11 @@ const projects = [
     title: "Battle Arena",
     category: "3D Environment",
     description: "This scene is designed as a battle arena, which I created as an experimental project. I built it with the intention of exporting it to Unity for use in game development. I learned a lot about texturing and material creation in Blender while working on this project.",
-    image: battleArenaMain,
+    image: '/Images/Environment/Battle_Arena/main.jpg',
     images: [
-      battleArenaMain,
-      battleArena1,
-      battleArena2
+      "/Images/Environment/Battle_Arena/main.jpg",
+      "/Images/Environment/Battle_Arena/Arena.jpg",
+      "/Images/Environment/Battle_Arena/Arena_clay.jpg",
     ],
     technologies: ["Blender", "Cycle Engine"],
     type: "3D Art",
@@ -123,15 +125,15 @@ const projects = [
     title: "Cube Scene",
     category: "3D Environment",
     description: "This is one of my fully refined scenes created in Blender. It features a default cube setup with various lighting experiments, and helped me understand optimization techniques within Blender.",
-    image: cubeSceneMain,
+    image: '/Images/Environment/Cube/Cubemain.jpg',
     images: [
-      cubeSceneMain,
-      cubeScene1,
-      cubeScene2,
-      cubeScene3,
-      cubeScene4,
-      cubeScene5,
-      cubeScene6,
+      "/Images/Environment/Cube/Cubemain.jpg",
+      "/Images/Environment/Cube/Cube_1.png",
+      "/Images/Environment/Cube/Cube2.jpg",
+      "/Images/Environment/Cube/Cube_3.png",
+      "/Images/Environment/Cube/Cube_4.png",
+      "/Images/Environment/Cube/Cube_clay.png",
+      "/Images/Environment/Cube/Cube_work.png",
     ],
     technologies: ["Blender", "Cycle Engine"],
     type: "3D Art",
@@ -145,14 +147,14 @@ const projects = [
     title: "Petrol Pump Scene",
     category: "3D Environment",
     description: "This is another experimental project I created to test exterior lighting. The scene is inspired by the loading screen image from the game PUBG.",
-    image: petrolSceneMain,
+    image: '/Images/Environment/PetrolPump/Petrol_pump_main.png',
     images: [
-      petrolSceneMain,
-      petrolScene1,
-      petrolScene2,
-      petrolScene3,
-      petrolScene4,
-      petrolScene5,
+      "/Images/Environment/PetrolPump/Petrol_pump_main.png",
+      "/Images/Environment/PetrolPump/Petrol_pump_1.png",
+      "/Images/Environment/PetrolPump/Petrol_pump_2.png",
+      "/Images/Environment/PetrolPump/Petrol_pump_3.png",
+      "/Images/Environment/PetrolPump/Petrol_Pump_Workbench.png",
+      "/Images/Environment/PetrolPump/Petrol_Pump_clay.png",
     ],
     technologies: ["Blender", "Cycle Engine"],
     type: "3D Art",
@@ -167,16 +169,16 @@ const projects = [
     title: "Temple Scene",
     category: "3D Environment",
     description: "This is one of my favorite scenes created in Blender, featuring a ruined temple in a cave. It is loast temple of the ancient civilization. This project helped me to understand volumetric lighting, texturing in detail, particle system in blender.",
-    image: templeSceneMain,
+    image: '/Images/Environment/Temple/TempleMain.jpg',
     images: [
-      templeSceneMain,
-      templeScene1,
-      templeScene2,
-      templeScene3,
-      templeScene4,
-      templeScene5,
-      templeScene6,
-      templeScene7
+      "/Images/Environment/Temple/TempleMain.jpg",
+      "/Images/Environment/Temple/Temple1.jpg",
+      "/Images/Environment/Temple/Temple2.png",
+      "/Images/Environment/Temple/Temple3.png",
+      "/Images/Environment/Temple/Temple4.jpg",
+      "/Images/Environment/Temple/Temple5.png",
+      "/Images/Environment/Temple/Temple6.png",
+      "/Images/Environment/Temple/Temple7.png",
     ],
     technologies: ["Blender", "Cycle Engine"],
     type: "3D Art",
@@ -190,12 +192,12 @@ const projects = [
     title: "Luminara Scene",
     category: "3D Environment",
     description: "This is my latest project, created for the KitBash3D Luminara Challenge. It depicts the lost city of Luminara, discovered by a group of explorers and later visited by many others. The project is not fully completed due to hardware limitations, as my system struggled to handle the high-detail assets.",
-    image: luminaraSceneMain,
+    image: '/Images/Environment/Luminara/Luminaramain.jpg',
     images: [
-      luminaraSceneMain,
-      luminaraScene1,
-      luminaraScene2,
-      luminaraScene4,
+      "Images/Environment/Luminara/Luminaramain.jpg",
+      "Images/Environment/Luminara/Luminara1.png",
+      "Images/Environment/Luminara/Luminara2.png",
+      "Images/Environment/Luminara/Luminara4.png",
     ],
     technologies: ["Blender", "Cycle Engine"],
     type: "3D Art",
@@ -210,13 +212,13 @@ const projects = [
     title: "Ruins Scene",
     category: "3D Environment",
     description: "This is one of my favorite scenes created in Blender, featuring a ruined temple on a mountain. This project helped me learn a lot about lighting, texturing, clouds, camera angles, and composition. I also used several online assets to speed up the creation process. It also helped me understand the technical aspects of scene creation in Blender, particularly through the use of geometry nodes.",
-    image: ruinsSceneMain,
+    image: 'Images/Environment/Ruins/Ruin_main.jpg',
     images: [
-      ruinsSceneMain,
-      ruinsScene1,
-      ruinsScene2,
-      ruinsScene3,
-      ruinsScene4,
+      "Images/Environment/Ruins/Ruin_main.jpg",
+      "Images/Environment/Ruins/Ruin-1.jpg",
+      "Images/Environment/Ruins/Ruin-2.png",
+      "Images/Environment/Ruins/Ruin_Workbench.png",
+      "Images/Environment/Ruins/Ruin_Clay.jpg",
     ],
     technologies: ["Blender", "Cycle Engine"],
     type: "3D Art",
@@ -231,10 +233,10 @@ const projects = [
     title: "Sword",
     category: "3D Models",
     description: "This was my very first project in Blender, created while learning from YouTube tutorials. I modeled this sword to understand the basics of modeling, texturing, and rendering in Blender.",
-    image: swordMain,
+    image: 'Images/Models/Sword/Sword.jpg',
     images: [
-      swordMain,
-      swordworkbench
+      "Images/Models/Sword/Sword.jpg",
+      "Images/Models/Sword/Swordworkbench.png"
     ],
     technologies: ["Blender", "Evee Engine"],
     type: "3D Art",
@@ -249,10 +251,10 @@ const projects = [
     title: "Arc Reactor",
     category: "3D Models",
     description: "This is my second project while learning Blender, where I created a arc reactor inspired by marvel Ironman movie.",
-    image: arcMain,
+    image: 'Images/Models/Arc/Arc.png',
     images: [
-      arcMain,
-      arcworkbench
+      "Images/Models/Arc/Arc.png",
+      "Images/Models/Arc/Arc_workbench.png",
     ],
     technologies: ["Blender", "Evee engine"],
     type: "3D Art",
@@ -268,11 +270,11 @@ const projects = [
     title: "Guns",
     category: "3D Models",
     description: "These are different versions of guns created through a collaborative effort between me and my friend, although he has since moved on from the path of 3D art.",
-    image: gunMain,
+    image: 'Images/Models/Guns/Gun01.jpg',
     images: [
-      gunMain,
-      gun1,
-      gun2,
+      "Images/Models/Guns/Gun01.jpg",
+      "Images/Models/Guns/Gun02.jpg",
+      "Images/Models/Guns/Gun03.jpg",
     ],
     technologies: ["Blender", "Cycle Engine"],
     type: "3D Art",
@@ -287,9 +289,9 @@ const projects = [
     title: "Robot Arm",
     category: "3D Models",
     description: "This is a robotic arm I created during an online course on hardsurface modeling in Blender.",
-    image: robotArmMain,
+    image: 'Images/Models/RobotArm/Arm.png',
     images: [
-      robotArmMain
+      "Images/Models/RobotArm/Arm.png"
     ],
     technologies: ["Blender", "Cycle Engine"],
     type: "3D Art",
@@ -304,13 +306,13 @@ const projects = [
     title: "Machine Gun",
     category: "3D Models",
     description: `I created this model to deepen my understanding of hard surface modeling and Boolean operations in Blender. It's inspired by the game Boom Beach by Supercell.`,
-    image: machineGunMain,
+    image: 'Images/Models/Machine_gun/Machine_compo_2.png',
     images: [
-      machineGunMain,
-      machineGun1,
-      machineGun2,
-      machineGun3,
-      machineGun4
+      "Images/Models/Machine_gun/Machine_compo_2.png",
+      "Images/Models/Machine_gun/Machine_compo.png",
+      "Images/Models/Machine_gun/Machine.png",
+      "Images/Models/Machine_gun/Machine_2.png",
+      "Images/Models/Machine_gun/Machine_2_Clay.png",
     ],
     technologies: ["Blender", "Cycle Engine"],
     type: "3D Art",
@@ -325,12 +327,12 @@ const projects = [
     title: "Saregama",
     category: "3D Models",
     description: `This is another model I made to learn more about hardsurface modeling in Blender. It's a detailed model of a saregama, an old music player, which I created to understand themodeling and texturing in blender.`,
-    image: saregamaMain,
+    image: 'Images/Models/Saregama/Saregama_composite.png',
     images: [
-      saregamaMain,
-      saregama1,
-      saregama2,
-      saregama3
+      "Images/Models/Saregama/Saregama_composite.png",
+      "Images/Models/Saregama/Saregama.png",
+      "Images/Models/Saregama/Saregama_2.png",
+      "Images/Models/Saregama/Saregama_2_Clay.png",
     ],
     technologies: ["Blender", "Cycle Engine"],
     type: "3D Art",
@@ -345,11 +347,11 @@ const projects = [
     title: "Assault Gun",
     category: "3D Models",
     description: "I created this detailed assault gun model for use in game engines. It still requires some optimization and UV unwrapping to be fully game-ready.",
-    image: assaultMain,
+    image: 'Images/Models/Assault/Assault_Compo.png',
     images: [
-      assaultMain,
-      assault1,
-      assault2
+      "Images/Models/Assault/Assault_Compo.png",
+      "Images/Models/Assault/Assault.png",
+      "Images/Models/Assault/Assault_Clay.png",
     ],
     technologies: ["Blender", "Cycle Engine", "Unity"],
     type: "3D Art",
@@ -364,11 +366,11 @@ const projects = [
     title: "Storage Box",
     category: "3D Models",
     description: `This is a storage box model I created for use in games. It is fully optimized, UV unwrapped, and ready for integration into game engines. You can download this model for free from my Fab marketplace: [Fab](https://www.fab.com/listings/84637ad9-e28f-4915-866d-41b5c882a00c).`,
-    image: storageBoxMain,
+    image: 'Images/Models/StorageBox/Box.png',
     images: [
-      storageBoxMain,
-      storageBox1,
-      storageBox2
+      "Images/Models/StorageBox/Box.png",
+      "Images/Models/StorageBox/StorageBox_2.png",
+      "Images/Models/StorageBox/StorageBox.png",
     ],
     technologies: ["Blender", "Cycle Engine", "Unity", "Marmoset Toolbag", "RizomUV", "Godot Engine"],
     type: "3D Art",
@@ -383,12 +385,12 @@ const projects = [
     title: "Robot",
     category: "3D Models",
     description: "This is another recent project which was made with collaboration with my friend. It is a robot model which is fully rigged and animated. It will soon be available on fab for the games.",
-    image: robotMain,
+    image: 'Images/Models/Robot/Robot_main.png',
     images: [
-      robotMain,
-      robot1,
-      robot2,
-      robot3
+      "Images/Models/Robot/Robot_main.png",
+      "Images/Models/Robot/Robot_head.png",
+      "Images/Models/Robot/Robot_both.png",
+      "Images/Models/Robot/Robot_main_Clay.png",
     ],
     technologies: ["Blender", "Cycle Engine", "Unity"],
     type: "3D Art",
@@ -403,9 +405,9 @@ const projects = [
     title: "Ping Pong Ball Game",
     category: "Games",
     description: `This is a simple ping pong ball game which I made in C++ using raylib library with GLFW fro window management. I also integrate ImGui for the UI in it. It is completely made in C++ from scratch. You can download it from here: [Github Repo](https://github.com/Dhruv00421/Ping-pong-ball)`,
-    image: pingPongBall,
+    image: '/Images/Games/PingPongBall.png',
     images: [
-      pingPongBall
+      "/Images/Games/PingPongBall.png",
     ],
     technologies: ["Blender", "Cycle Engine", "Unity"],
     type: "Game Development",
@@ -419,12 +421,9 @@ const projects = [
     title: "Mini Knight Game",
     category: "Games",
     description: "This is a 2D mini knight game which is similar to mario. It was made in Godot Engine using GDScript. I made this game to learn the Godot Engine. You can download and play it from here: [Github Repo](https://github.com/Dhruv00421/Knight-godot-game)",
-    image: robotMain,
+    image: '/Images/Games/Knight.png',
     images: [
-      robotMain,
-      robot1,
-      robot2,
-      robot3
+      "/Images/Games/Knight.png",
     ],
     technologies: ["Blender", "Cycle Engine", "Unity"],
     type: "Game Development",
