@@ -1,24 +1,24 @@
 // Anime style scene
-import animeSceneMain from './Projects/Environment/Anime style/Animescene3.png';
-import animeScene1 from './Projects/Environment/Anime style/animescene.png';
-import animeScene2 from './Projects/Environment/Anime style/animescene2.png';
-import animeScene3 from './Projects/Environment/Anime style/Animesceneworkbench.png';
-import animeScene4 from './Projects/Environment/Anime style/Scene1.png';
-import animeScene5 from './Projects/Environment/Anime style/scene2.png';
+import animeSceneMain from './Projects/Environment/Anime_style/Animescene3.png';
+import animeScene1 from './Projects/Environment/Anime_style/animescene.png';
+import animeScene2 from './Projects/Environment/Anime_style/animescene2.png';
+import animeScene3 from './Projects/Environment/Anime_style/Animesceneworkbench.png';
+import animeScene4 from './Projects/Environment/Anime_style/Scene1.png';
+import animeScene5 from './Projects/Environment/Anime_style/scene2.png';
 
 // Winter wonderland scene
-import winterWonderlandMain from './Projects/Environment/Winter Wonderland/winterwonder.png';
-import winterWonderland1 from './Projects/Environment/Winter Wonderland/wintercastle.png';
-import winterWonderland3 from './Projects/Environment/Winter Wonderland/wintercastlework.png';
-import winterWonderland2 from './Projects/Environment/Winter Wonderland/wintercastleworkrandom.png';
+import winterWonderlandMain from './Projects/Environment/Winter_wonderland/winterwonder.png';
+import winterWonderland1 from './Projects/Environment/Winter_wonderland/wintercastle.png';
+import winterWonderland3 from './Projects/Environment/Winter_wonderland/wintercastlework.png';
+import winterWonderland2 from './Projects/Environment/Winter_wonderland/wintercastleworkrandom.png';
 
 // Moon landscape scene
-import moonLandscapeMain from './Projects/Environment/Moon Landcape/moon8k.jpg';
-import moonLandscape1 from './Projects/Environment/Moon Landcape/Moonlandscape.jpg';
-import moonLandscape2 from './Projects/Environment/Moon Landcape/Moon_landscape4k.png';
-import moonLandscape3 from './Projects/Environment/Moon Landcape/Moon4_Compo.png';
-import moonLandscape4 from './Projects/Environment/Moon Landcape/Moon_workbench.png';
-import moonLandscape5 from './Projects/Environment/Moon Landcape/moon8k_Clay.jpg';
+import moonLandscapeMain from './Projects/Environment/Moon_Landscape/moon8k.jpg';
+import moonLandscape1 from './Projects/Environment/Moon_Landscape/Moonlandscape.jpg';
+import moonLandscape2 from './Projects/Environment/Moon_Landscape/Moon_landscape4k.png';
+import moonLandscape3 from './Projects/Environment/Moon_Landscape/Moon4_Compo.png';
+import moonLandscape4 from './Projects/Environment/Moon_Landscape/Moon_workbench.png';
+import moonLandscape5 from './Projects/Environment/Moon_Landscape/moon8k_Clay.jpg';
 
 // Battle arena scene
 import battleArenaMain from './Projects/Environment/Battle_Arena/main.jpg';
