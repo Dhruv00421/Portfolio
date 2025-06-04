@@ -9,28 +9,8 @@ import { useGLTF, useAnimations, Plane } from '@react-three/drei'
 import { a, useSpring } from '@react-spring/three'
 // import { GLTF } from 'three-stdlib'
 
-import cubeModel from '../assets/3D/Cube_Model.glb';
+const cubeModel = '/3DModels/Cube_Model.glb';
 
-// type GLTFResult = GLTF & {
-//   nodes: {
-//     Cube: THREE.Mesh
-//     Torus: THREE.Mesh
-//     Torus001: THREE.Mesh
-//     Cube001: THREE.Mesh
-//     Cylinder001_1: THREE.Mesh
-//     Cylinder001_2: THREE.Mesh
-//   }
-//   materials: {
-//     ['Material.001']: THREE.MeshPhysicalMaterial
-//     Stand: THREE.MeshPhysicalMaterial
-//     Cube: THREE.MeshPhysicalMaterial
-//     Material: THREE.MeshStandardMaterial
-//     Glow: THREE.MeshStandardMaterial
-//   }
-// }
-
-// type ActionName = 'Action'
-// type GLTFActions = Record<ActionName, THREE.AnimationAction>
 
 const Cube = ({
   isRotating, 
