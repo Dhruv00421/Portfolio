@@ -85,11 +85,11 @@ export default function ContactPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center px-4 py-8 sm:px-6 lg:px-8 mt-11">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center px-4 py-8 sm:px-6 lg:px-8 ">
       <div className="max-w-2xl w-full">
         {/* Header Section */}
         <div className="text-center mb-8 sm:mb-12">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 mt-11 leading-tight">
             Let's Connect
           </h1>
           <p className="text-base sm:text-lg text-gray-600 max-w-md mx-auto px-4 sm:px-0">

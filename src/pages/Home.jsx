@@ -72,19 +72,21 @@ const Home = () => {
 
   return (
     <motion.section 
-      className='w-full h-screen pt-16 relative bg-[#FAFAFA]'
+      className='w-full h-screen pt-16 relative bg-[#FAFAFA] 
+      sm:pt-20 md:pt-24 lg:pt-28 xl:pt-32'  // Responsive padding top
       initial="initial"
       animate="animate"
       exit="exit"
       variants={pageVariants}
       transition={{ duration: 0.5 }}
     > 
-      <div className='absolute bottom-20 left-4 md:left-10 z-10 pointer-events-none flex items-center gap-2 text-black font-medium text-sm md:text-base'>
+      <div className='absolute bottom-20 left-1/12 sm:left-16 md:left-20 lg:left-24 flex items-center gap-2 text-black font-medium text-xs sm:text-sm md:text-base'>
         Swipe For more
         <img src={arrow} alt='arrow' className='w-4 h-4 object-contain' />
       </div>
       
       <Canvas
+        gl={{ toneMapping: useThree.ACESFilmicToneMapping }}
         className={`w-full h-screen bg-transparent ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`}
         camera={{ near: 0.1, far: 1000 }}
       >
