@@ -22,11 +22,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-*.glb
-*.gltf
-*.fbx
-*.obj
-*.png
-*.jpg
-*.mp4
