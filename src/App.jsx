@@ -13,7 +13,7 @@ const App = () => {
   const location = useLocation()
   
   return (
-    <>
+    <div className='relative'>
       <Navbar />
       {/* <CustomContextMenu /> */}
       <AnimatePresence mode="wait">
@@ -24,7 +24,7 @@ const App = () => {
           <Route path="/projects" element={<Projects />} />
         </Routes>
       </AnimatePresence>
-    </>
+    </div>
   )
 }
 

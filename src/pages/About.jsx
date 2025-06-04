@@ -261,7 +261,7 @@ const About = () => {
 
           <div className="flex flex-col md:flex-row">
             {/* Left Line */}
-            <div className="relative w-full md:w-16 md:flex-shrink-0 mb-12 md:mb-0">
+            <div className="relative w-full md:w-16 md:flex-shrink-0 mb-12 md:mb-0 -z-10">
               <div
                 ref={skillsLineRef}
                 className="absolute left-1/2 md:left-8 top-0 w-1 bg-gray-300 transform -translate-x-1/2"
@@ -316,7 +316,7 @@ const About = () => {
 
           <div className="flex flex-col md:flex-row">
             {/* Left Line */}
-            <div className="relative w-full md:w-16 md:flex-shrink-0 mb-12 md:mb-0">
+            <div className="relative w-full md:w-16 md:flex-shrink-0 mb-12 md:mb-0 -z-10">
               <div
                 ref={toolsLineRef}
                 className="absolute left-1/2 md:left-8 top-0 w-1 bg-gray-300 transform -translate-x-1/2"
