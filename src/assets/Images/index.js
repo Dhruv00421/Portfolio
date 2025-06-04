@@ -36,9 +36,9 @@ import cubeScene6 from './Projects/Environment/Cube/Cube_clay.png';
 
 // petrol scene
 import petrolSceneMain from './Projects/Environment/PetrolPump/Petrol_pump_main.png';
-import petrolScene1 from './Projects/Environment/PetrolPump/Petrol_pump-1.png';
-import petrolScene2 from './Projects/Environment/PetrolPump/Petrol_pump-2.png';
-import petrolScene3 from './Projects/Environment/PetrolPump/Petrol_pump-3.png';
+import petrolScene1 from './Projects/Environment/PetrolPump/Petrol_pump_1.png';
+import petrolScene2 from './Projects/Environment/PetrolPump/petrol_pump_2.png';
+import petrolScene3 from './Projects/Environment/PetrolPump/petrol_pump_3.png';
 import petrolScene4 from './Projects/Environment/PetrolPump/Petrol_Pump_Workbench.png';
 import petrolScene5 from './Projects/Environment/PetrolPump/Petrol_Pump_clay.png';
 
