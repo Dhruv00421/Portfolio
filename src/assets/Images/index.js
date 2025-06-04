@@ -74,7 +74,7 @@ export { battleArenaMain, battleArena1, battleArena2 };
 export { cubeSceneMain, cubeScene1, cubeScene2, cubeScene3, cubeScene4, cubeScene5, cubeScene6 };
 export { petrolSceneMain, petrolScene1, petrolScene2, petrolScene3, petrolScene4, petrolScene5 };
 export { ruinsSceneMain, ruinsScene1, ruinsScene2, ruinsScene3, ruinsScene4 };
-export { templeSceneMain, templeScene1, templeScene2, templeScene3, templeScene4, templeScene5, templeScene6, templeScene7 };
+export { templeSceneMain, templeScene1, templeScene3, templeScene4, templeScene5, templeScene6, templeScene7 };
 export { luminaraSceneMain, luminaraScene1, luminaraScene2, luminaraScene4 };
 
 
