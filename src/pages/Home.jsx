@@ -102,7 +102,10 @@ const Home = () => {
       variants={pageVariants}
       transition={{ duration: 0.5 }}
     > 
-      
+      <div className='absolute bottom-20 sm:bottom-16 md:bottom-16 lg:bottom-20 left-1/12 sm:left-16 md:left-20 lg:left-24 flex items-center gap-2 text-black font-medium text-xs sm:text-sm md:text-base'>
+        Swipe For more
+        <img src={arrow} alt='arrow' className='w-4 h-4 object-contain' />
+      </div>
       
       <Canvas
         gl={{ toneMapping: useThree.ACESFilmicToneMapping }}
@@ -139,10 +142,7 @@ const Home = () => {
         </Suspense>
       </Canvas>
 
-      <div className='absolute bottom-8 sm:bottom-12 md:bottom-16 lg:bottom-20 left-1/12 sm:left-16 md:left-20 lg:left-24 flex items-center gap-2 text-black font-medium text-xs sm:text-sm md:text-base'>
-        Swipe For more
-        <img src={arrow} alt='arrow' className='w-4 h-4 object-contain' />
-      </div>
+      
 
       {!isRoot && (
         <motion.div 

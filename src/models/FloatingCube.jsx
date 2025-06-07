@@ -3,6 +3,7 @@ import { useFrame, useThree } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
 import * as THREE from 'three'
 
+
 const FloatingCubes = ({
   count = 5,
   radius = 1.8,
@@ -49,18 +50,54 @@ const FloatingCubes = ({
     lastX.current = e.clientX
   }
 
+
+  const handleTouchStart = (e) => {
+    isDragging.current = true
+    lastX.current = e.touches[0].clientX
+  }
+
+  const handleTouchMove = (e) => {
+    if (!isDragging.current) return
+
+    const clientX = e.touches[0].clientX
+    const deltaX = clientX - lastX.current
+    direction.current = -deltaX * 0.002 // same as desktop
+    lastX.current = clientX
+  }
+
+  const handleTouchEnd = () => {
+    isDragging.current = false
+    direction.current = 0 // optional: reset direction, or let inertia continue
+  }
+
+  
+
   useEffect(() => {
     const canvas = gl.domElement
+
+    // Desktop pointer events
     canvas.addEventListener('pointerdown', handlePointerDown)
     canvas.addEventListener('pointerup', handlePointerUp)
     canvas.addEventListener('pointermove', handlePointerMove)
+
+    // Mobile touch events
+    canvas.addEventListener('touchstart', handleTouchStart)
+    canvas.addEventListener('touchmove', handleTouchMove)
+    canvas.addEventListener('touchend', handleTouchEnd)
+    canvas.addEventListener('touchcancel', handleTouchEnd)
 
     return () => {
       canvas.removeEventListener('pointerdown', handlePointerDown)
       canvas.removeEventListener('pointerup', handlePointerUp)
       canvas.removeEventListener('pointermove', handlePointerMove)
+
+      canvas.removeEventListener('touchstart', handleTouchStart)
+      canvas.removeEventListener('touchmove', handleTouchMove)
+      canvas.removeEventListener('touchend', handleTouchEnd)
+      canvas.removeEventListener('touchcancel', handleTouchEnd)
     }
   }, [gl])
+
 
   useFrame(({ clock }) => {
     const t = clock.getElapsedTime()

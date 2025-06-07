@@ -9,6 +9,26 @@ function Card({ title, description, position, rotation, link }) {
   const navigate = useNavigate();
   const ref = useRef()
   const [hovered, hover] = useState(false)
+  const { camera } = useThree();
+  const [isFacingFront, setIsFacingFront] = useState(true);
+
+  useFrame(() => {
+    if (ref.current) {
+      const cardWorldPosition = new THREE.Vector3();
+      ref.current.getWorldPosition(cardWorldPosition);
+
+      const cameraToCard = new THREE.Vector3();
+      cameraToCard.subVectors(cardWorldPosition, camera.position).normalize();
+
+      const cardForward = new THREE.Vector3(0, 0, 1).applyQuaternion(ref.current.quaternion);
+
+      const dot = cardForward.dot(cameraToCard);
+
+      // dot > 0 → front facing camera
+      setIsFacingFront(dot > 0);
+    }
+  });
+
   
   const pointerOver = (e) => {
     e.stopPropagation()
@@ -84,6 +104,7 @@ function Card({ title, description, position, rotation, link }) {
         anchorX="center"
         anchorY="middle"
         maxWidth={1.8}
+        side={THREE.FrontSide}
       >
         {title || "Card Title"}
       </Text>
@@ -105,9 +126,14 @@ function Card({ title, description, position, rotation, link }) {
         <Html
           position={[0, -0.45, 0.02]} // Slightly in front of the card
           center
-          transform // This makes it stick to the 3D transform of the parent
+          transform
           occlude
-          style={{ pointerEvents: 'auto' }}
+          style={{ 
+            pointerEvents: 'auto',
+            backfaceVisibility: 'hidden',
+            transformStyle: 'preserve-3d',
+            color: hovered ? '#2563eb' : '#1d4ed8',
+          }}
         >
           <div
             style={{
