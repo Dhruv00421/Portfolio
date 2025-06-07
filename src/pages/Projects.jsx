@@ -43,7 +43,7 @@ const projects = [
     id: 1,
     title: "Anime Style Scene",
     category: "3D Environment",
-    description: "This is my first scene in blender, inspired by anime aesthetics. I made different scenes before this one, but this is the first perfectly finished.",
+    description: "This is my first fully completed scene in Blender, inspired by anime aesthetics. While I experimented with various scenes before, this project marks my first polished and finished work.",
     image: "https://res.cloudinary.com/dthacqaj3/image/upload/v1749040440/scene2_kisy79.png",
     images: [
       "https://res.cloudinary.com/dthacqaj3/image/upload/v1749040440/scene2_kisy79.png",
@@ -65,7 +65,7 @@ const projects = [
     id: 2,
     title: "Winter Wonderland Scene",
     category: "3D Environment",
-    description: "This scene I made for the winter wonderland challenge which host by kaizen (a wellknown youtuber). It features a castle in the middle of a snowy landscape with a snow flakes.",
+    description: "This scene was created for the Winter Wonderland Challenge hosted by Kaizen, a well-known YouTuber. It features a castle set within a snowy landscape, complete with falling snowflakes to enhance the atmosphere.",
     image: "https://res.cloudinary.com/dthacqaj3/image/upload/v1749040558/winterwonder_psofp3.png",
     images: [
       "https://res.cloudinary.com/dthacqaj3/image/upload/v1749040558/winterwonder_psofp3.png",
@@ -85,7 +85,7 @@ const projects = [
     id: 3,
     title: "Lunar Landscape",
     category: "3D Environment",
-    description: "This is another scene I created for the Kaizen Challenge, featuring a lunar landscape theme. This project helped me deepen my understanding of lighting and terrain creation.",
+    description: "This scene, created for the Kaizen Challenge, features a lunar landscape theme. The project helped me deepen my skills in lighting techniques and terrain creation.",
     image: 'https://res.cloudinary.com/dthacqaj3/image/upload/v1749040524/Moon_landscape4k_nvlgn0.png',
     images: [
       "https://res.cloudinary.com/dthacqaj3/image/upload/v1749040524/Moon_landscape4k_nvlgn0.png",
@@ -106,7 +106,7 @@ const projects = [
     id: 4,
     title: "Battle Arena",
     category: "3D Environment",
-    description: "This scene is designed as a battle arena, which I created as an experimental project. I built it with the intention of exporting it to Unity for use in game development. I learned a lot about texturing and material creation in Blender while working on this project.",
+    description: "This scene is a battle arena created as an experimental project, designed with the intention of exporting it to Unity for game development. Throughout this project, I gained valuable experience in texturing and material creation within Blender.",
     image: 'https://res.cloudinary.com/dthacqaj3/image/upload/v1749040457/main_jw4xgn.jpg',
     images: [
       "https://res.cloudinary.com/dthacqaj3/image/upload/v1749040457/main_jw4xgn.jpg",
@@ -124,7 +124,7 @@ const projects = [
     id: 5,
     title: "Cube Scene",
     category: "3D Environment",
-    description: "This is one of my fully refined scenes created in Blender. It features a default cube setup with various lighting experiments, and helped me understand optimization techniques within Blender.",
+    description: "This is one of my fully refined scenes created in Blender, featuring a default cube setup alongside various lighting experiments. The project significantly enhanced my understanding of optimization techniques within Blender.",
     image: 'https://res.cloudinary.com/dthacqaj3/image/upload/v1749040469/Cubemain_lrriee.jpg',
     images: [
       "https://res.cloudinary.com/dthacqaj3/image/upload/v1749040469/Cubemain_lrriee.jpg",
@@ -146,7 +146,7 @@ const projects = [
     id: 6,
     title: "Petrol Pump Scene",
     category: "3D Environment",
-    description: "This is another experimental project I created to test exterior lighting. The scene is inspired by the loading screen image from the game PUBG.",
+    description: "This experimental project was created to explore exterior lighting techniques. The scene draws inspiration from the loading screen imagery of the game PUBG.",
     image: 'https://res.cloudinary.com/dthacqaj3/image/upload/v1749040554/Petrol_pump_main_cx4nxl.png',
     images: [
       "https://res.cloudinary.com/dthacqaj3/image/upload/v1749040554/Petrol_pump_main_cx4nxl.png",
@@ -168,7 +168,7 @@ const projects = [
     id: 7,
     title: "Temple Scene",
     category: "3D Environment",
-    description: "This is one of my favorite scenes created in Blender, featuring a ruined temple in a cave. It is loast temple of the ancient civilization. This project helped me to understand volumetric lighting, texturing in detail, particle system in blender.",
+    description: "This is one of my favorite scenes created in Blender, featuring a ruined temple nestled within a cave—depicting the lost temple of an ancient civilization. This project helped me deepen my understanding of volumetric lighting, detailed texturing, and the particle system in Blender.",
     image: 'https://res.cloudinary.com/dthacqaj3/image/upload/v1749040560/TempleMain_irqyd8.jpg',
     images: [
       "https://res.cloudinary.com/dthacqaj3/image/upload/v1749040560/TempleMain_irqyd8.jpg",
@@ -191,7 +191,7 @@ const projects = [
     id: 8,
     title: "Luminara Scene",
     category: "3D Environment",
-    description: "This is my latest project, created for the KitBash3D Luminara Challenge. It depicts the lost city of Luminara, discovered by a group of explorers and later visited by many others. The project is not fully completed due to hardware limitations, as my system struggled to handle the high-detail assets.",
+    description: "This is my latest project, created for the KitBash3D Luminara Challenge. It depicts the lost city of Luminara, uncovered by a group of explorers and subsequently visited by many. While the project showcases detailed environments and storytelling, it remains incomplete due to hardware limitations, as my system faced challenges handling the high-detail assets.",
     image: 'https://res.cloudinary.com/dthacqaj3/image/upload/v1749040476/Luminaramain_pnpyuo.jpg',
     images: [
       "https://res.cloudinary.com/dthacqaj3/image/upload/v1749040476/Luminaramain_pnpyuo.jpg",
@@ -211,7 +211,7 @@ const projects = [
     id: 9,
     title: "Ruins Scene",
     category: "3D Environment",
-    description: "This is one of my favorite scenes created in Blender, featuring a ruined temple on a mountain. This project helped me learn a lot about lighting, texturing, clouds, camera angles, and composition. I also used several online assets to speed up the creation process. It also helped me understand the technical aspects of scene creation in Blender, particularly through the use of geometry nodes.",
+    description: "This is one of my favorite scenes created in Blender, depicting a ruined temple atop a mountain. Through this project, I gained valuable experience in lighting, texturing, cloud creation, camera framing, and overall composition. To accelerate the workflow, I incorporated several online assets. Additionally, this project deepened my understanding of the technical aspects of scene creation in Blender, especially with the use of geometry nodes.",
     image: 'https://res.cloudinary.com/dthacqaj3/image/upload/v1749040567/Ruin-1_ih4gur.jpg',
     images: [
       "https://res.cloudinary.com/dthacqaj3/image/upload/v1749040567/Ruin-1_ih4gur.jpg",
@@ -232,7 +232,7 @@ const projects = [
     id: 10,
     title: "Sword",
     category: "3D Models",
-    description: "This was my very first project in Blender, created while learning from YouTube tutorials. I modeled this sword to understand the basics of modeling, texturing, and rendering in Blender.",
+    description: "As my introductory Blender project, I created this sword model while following YouTube tutorials. The project helped me build a solid foundation in 3D modeling, texturing, and rendering techniques.",
     image: 'https://res.cloudinary.com/dthacqaj3/image/upload/v1749040784/Sword_x9b0es.jpg',
     images: [
       "https://res.cloudinary.com/dthacqaj3/image/upload/v1749040784/Sword_x9b0es.jpg",
@@ -250,7 +250,7 @@ const projects = [
     id: 11,
     title: "Arc Reactor",
     category: "3D Models",
-    description: "This is my second project while learning Blender, where I created a arc reactor inspired by marvel Ironman movie.",
+    description: "This is my second project while learning Blender, where I created an Arc Reactor inspired by the Marvel Iron Man movies.",
     image: 'https://res.cloudinary.com/dthacqaj3/image/upload/v1749040769/Arc_p401am.png',
     images: [
       "https://res.cloudinary.com/dthacqaj3/image/upload/v1749040769/Arc_p401am.png",
@@ -269,7 +269,7 @@ const projects = [
     id: 12,
     title: "Guns",
     category: "3D Models",
-    description: "These are different versions of guns created through a collaborative effort between me and my friend, although he has since moved on from the path of 3D art.",
+    description: "These are various versions of gun models developed collaboratively between my friend and me. While my friend has since moved on from 3D art, our joint effort contributed significantly to my skills and experience in modeling weaponry.",
     image: 'https://res.cloudinary.com/dthacqaj3/image/upload/v1749040755/Gun01_orfjdv.jpg',
     images: [
       "https://res.cloudinary.com/dthacqaj3/image/upload/v1749040755/Gun01_orfjdv.jpg",
@@ -288,7 +288,7 @@ const projects = [
     id: 13,
     title: "Robot Arm",
     category: "3D Models",
-    description: "This is a robotic arm I created during an online course on hardsurface modeling in Blender.",
+    description: "This is a robotic arm model I created as part of an online course focused on hard surface modeling in Blender. The project helped me develop precision modeling skills, improve my understanding of mechanical components, and master advanced Blender techniques such as edge flow and Boolean operations.",
     image: 'https://res.cloudinary.com/dthacqaj3/image/upload/v1749040832/Arm_jjanzw.png',
     images: [
       "https://res.cloudinary.com/dthacqaj3/image/upload/v1749040832/Arm_jjanzw.png"
@@ -305,7 +305,7 @@ const projects = [
     id: 14,
     title: "Machine Gun",
     category: "3D Models",
-    description: `I created this model to deepen my understanding of hard surface modeling and Boolean operations in Blender. It's inspired by the game Boom Beach by Supercell.`,
+    description: `This project was developed to advance my proficiency in hard surface modeling and Boolean techniques in Blender. The model draws inspiration from the aesthetic and design style of Boom Beach by Supercell.`,
     image: 'https://res.cloudinary.com/dthacqaj3/image/upload/v1749040776/Machine_compo_2_conw38.png',
     images: [
       "https://res.cloudinary.com/dthacqaj3/image/upload/v1749040776/Machine_compo_2_conw38.png",
@@ -326,7 +326,7 @@ const projects = [
     id: 15,
     title: "Saregama",
     category: "3D Models",
-    description: `This is another model I made to learn more about hardsurface modeling in Blender. It's a detailed model of a saregama, an old music player, which I created to understand themodeling and texturing in blender.`,
+    description: `This project is a detailed model of a Saregama vintage music player, created as part of my exploration into hard surface modeling in Blender. The goal was to refine my skills in both modeling complex forms and applying realistic textures.`,
     image: 'https://res.cloudinary.com/dthacqaj3/image/upload/v1749040778/Saregama_composite_pm7x07.png',
     images: [
       "https://res.cloudinary.com/dthacqaj3/image/upload/v1749040778/Saregama_composite_pm7x07.png",
@@ -346,7 +346,7 @@ const projects = [
     id: 16,
     title: "Assault Gun",
     category: "3D Models",
-    description: "I created this detailed assault gun model for use in game engines. It still requires some optimization and UV unwrapping to be fully game-ready.",
+    description: "This is a detailed assault gun model I designed with game engine integration in mind. The model is still a work in progress and will undergo further optimization and UV unwrapping to achieve full game-ready quality.",
     image: 'https://res.cloudinary.com/dthacqaj3/image/upload/v1749040765/Assault_Compo_xgbgfz.png',
     images: [
       "https://res.cloudinary.com/dthacqaj3/image/upload/v1749040765/Assault_Compo_xgbgfz.png",
@@ -365,7 +365,7 @@ const projects = [
     id: 17,
     title: "Storage Box",
     category: "3D Models",
-    description: `This is a storage box model I created for use in games. It is fully optimized, UV unwrapped, and ready for integration into game engines. You can download this model for free from my Fab marketplace: [Fab](https://www.fab.com/listings/84637ad9-e28f-4915-866d-41b5c882a00c).`,
+    description: `The Storage Box is a game-ready 3D model I designed and optimized for real-time applications. It features clean UV unwrapping, efficient topology, and is fully compatible with modern game engines. The model is available for free on my Fab marketplace: [Fab](https://www.fab.com/listings/84637ad9-e28f-4915-866d-41b5c882a00c).`,
     image: 'https://res.cloudinary.com/dthacqaj3/image/upload/v1749040781/Box_iqvrwv.png',
     images: [
       "https://res.cloudinary.com/dthacqaj3/image/upload/v1749040781/Box_iqvrwv.png",
@@ -384,7 +384,7 @@ const projects = [
     id: 18,
     title: "Robot",
     category: "3D Models",
-    description: "This is another recent project which was made with collaboration with my friend. It is a robot model which is fully rigged and animated. It will soon be available on fab for the games.",
+    description: "This is a recent project created in collaboration with a friend: a fully rigged and animated robot model optimized for use in games. The asset will soon be published and available on Fab for developers to use in their projects.",
     image: 'https://res.cloudinary.com/dthacqaj3/image/upload/v1749040821/Robot_main_i3hjlq.png',
     images: [
       "https://res.cloudinary.com/dthacqaj3/image/upload/v1749040821/Robot_main_i3hjlq.png",
@@ -404,7 +404,7 @@ const projects = [
     id: 19,
     title: "Ping Pong Ball Game",
     category: "Games",
-    description: `This is a simple ping pong ball game which I made in C++ using raylib library with GLFW fro window management. I also integrate ImGui for the UI in it. It is completely made in C++ from scratch. You can download it from here: [Github Repo](https://github.com/Dhruv00421/Ping-pong-ball)`,
+    description: `Ping Pong Ball is a simple game I built entirely from scratch in C++. It leverages the raylib graphics library for rendering, uses GLFW for window management, and features a user interface created with ImGui. This project allowed me to deepen my understanding of low-level programming and game development in C++. You can check it out on [Github Repo](https://github.com/Dhruv00421/Ping-pong-ball)`,
     image: 'https://res.cloudinary.com/dthacqaj3/image/upload/v1749040867/PingPongBall_shoy8e.png',
     images: [
       "https://res.cloudinary.com/dthacqaj3/image/upload/v1749040867/PingPongBall_shoy8e.png",
@@ -420,7 +420,7 @@ const projects = [
     id: 20,
     title: "Mini Knight Game",
     category: "Games",
-    description: "This is a 2D mini knight game which is similar to mario. It was made in Godot Engine using GDScript. I made this game to learn the Godot Engine. You can download and play it from here: [Github Repo](https://github.com/Dhruv00421/Knight-godot-game)",
+    description: "Knight is a 2D mini-platformer game inspired by classics like Mario. I developed this project in the Godot Engine using GDScript to deepen my understanding of Godot’s game development workflow. The game features basic platforming mechanics and was designed as a hands-on learning experience. You can explore and download it via my [Github Repo](https://github.com/Dhruv00421/Knight-godot-game)",
     image: 'https://res.cloudinary.com/dthacqaj3/image/upload/v1749040864/Knight_rtefmb.png',
     images: [
       "https://res.cloudinary.com/dthacqaj3/image/upload/v1749040864/Knight_rtefmb.png",

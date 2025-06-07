@@ -12,6 +12,7 @@ import marmoset from '../assets/Icons/Marmoset.svg';
 import godot from '../assets/Icons/Godot.svg';
 import unity from '../assets/Icons/Unity.svg';
 import unreal from '../assets/Icons/Unreal.svg';
+import gaea from '../assets/Icons/Gaea.svg';
 import vscode from '../assets/Icons/VScode.svg';
 import visualStudio from '../assets/Icons/VisualStudio.svg';
 import git from '../assets/Icons/Git.svg';
@@ -21,121 +22,128 @@ import flax from '../assets/Icons/Flax.svg';
 const skills = [
   { 
     title: '3D Environments', 
-    description: 'I can create real-time 3D environments for games, with optimized assets and carefully crafted lighting to enhance mood and performance.' 
+    description: 'I create real-time 3D environments for games, with optimized assets and carefully crafted lighting to enhance both mood and performance.' 
   },
 
   { 
     title: '3D Models', 
-    description: 'I can create detailed 3D models with UV unwrapping and LODs optimized for games.' 
+    description: 'I design detailed 3D models with UV unwrapping and LODs, optimized specifically for game development.' 
   },
 
   { 
     title: 'C++', 
-    description: `I've been learning low-level programming and created a ping pong ball game in C++ using raylib, with ImGui integrated into it.`
+    description: 'I am learning low-level programming and have developed a Ping Pong ball game in C++ using the Raylib library, with ImGui integrated for the user interface.' 
   },
 
   { 
-    title: 'OpenGl', 
-    description: `I've recently been learning the OpenGL API and am currently working on a project using OpenGL with the GLFW library.`
+    title: 'OpenGL', 
+    description: 'I am currently exploring the OpenGL API and working on a project that utilizes OpenGL with the GLFW library.' 
   },
 
   { 
     title: 'HTML', 
-    description: 'I learned HTML in school and college, and have created several websites using it.' 
+    description: 'I have used HTML since school and college, and have built several websites using it.' 
   },
 
   { 
     title: 'CSS', 
-    description: 'I learned CSS alongside HTML and have built several websites using both.' 
+    description: 'I have developed websites using CSS alongside HTML, with a solid understanding of responsive and modern design principles.' 
   },
 
   { 
-    title: 'Javascript', 
-    description: 'I learned JavaScript in college and have an intermediate understanding of it. I’ve worked with various libraries and frameworks, and also gained experience in backend development using Node.js, Express.js, and MongoDB with Mongoose.' 
+    title: 'JavaScript', 
+    description: 'I have an intermediate understanding of JavaScript, having worked with various libraries and frameworks. I also have experience in backend development using Node.js, Express.js, and MongoDB with Mongoose.' 
   },
   
   { 
     title: 'C#', 
-    description: 'I learned basic C# for game development in Unity, and I plan to start creating games using Unity and C#.' 
+    description: 'I have a foundational knowledge of C# for game development in Unity, and am actively building games using Unity and C#.' 
   },
   
   { 
     title: 'Python', 
-    description: 'I have a basic understanding of Python and its applications in AI and machine learning, which I studied in college.' 
+    description: 'I have a basic understanding of Python, with exposure to its applications in AI and machine learning during my studies in college.' 
   },
 
   { 
     title: 'React', 
-    description: `I have a basic understanding of React, including how it works, its components, and hooks. This portfolio was also built using React` 
+    description: 'I have a basic understanding of React, including components and hooks. This portfolio was built using React.' 
   },
 
   { 
     title: 'Three.js', 
-    description: `I've learned the Three.js library along with the WebGL graphics API, and have a solid understanding of how they work. This portfolio also uses Three.js for the 3D cube animation, integrated into React using react-three-fiber.`
+    description: 'I have developed a solid understanding of Three.js and the WebGL graphics API. This portfolio features a 3D cube animation powered by Three.js and integrated with React via react-three-fiber.' 
   },
 
   { 
     title: 'Prompt Engineering', 
-    description: `I have a basic understanding of prompt engineering, including how to craft effective prompts to guide AI models like ChatGPT and image generation tools. I know how prompts work and how to use them to get the desired output from AI models.`
+    description: 'I have a basic understanding of prompt engineering and know how to craft effective prompts to guide AI models such as ChatGPT and image generation tools for desired outcomes.' 
   },
-
 ];
+
 
 const tools = [
   {
     title: 'Blender',
     image: blender,
-    description: `I've been using Blender for nearly 4-5 years to create 3D environments and models, and have completed many projects using it. I have a solid understanding of materials, shader graphs, UV unwrapping, and texturing. I'm also knowledgeable in lighting and rendering techniques using both Eevee and Cycles. Additionally, I have a basic understanding of rigging, animation, and geometry nodes in Blender.`
+    description: 'I have been using Blender for 4–5 years to create 3D environments and models, completing numerous projects. I have expertise in materials, shader graphs, UV unwrapping, texturing, and lighting techniques with both Eevee and Cycles. I also have a basic understanding of rigging, animation, and geometry nodes.'
   },
   
   {
     title: 'Marmoset Toolbag',
     image: marmoset,
-    description: 'I mainly use Blender for baking high-poly models to low-poly models, as it’s a powerful tool for texture baking.'
+    description: 'I primarily use Marmoset Toolbag for baking high-poly models to low-poly models, as it is an excellent tool for texture baking.'
   },
   
   {
     title: 'Godot',
     image: godot,
-    description: `I used Godot to create a 2D game as a way to understand the development process. I have a basic understanding of its scripting language, GDScript, as well as its scene system.`
+    description: `I developed a 2D game in Godot to better understand game development workflows. I have a basic knowledge of GDScript and Godot's scene system.`
   },
   
   {
     title: 'Unity',
     image: unity,
-    description: `I've recently started learning Unity and have a basic understanding of its interface, components, and C# scripting. I've also begun creating environments and games using it.`
+    description: 'I am currently learning Unity and have a foundational understanding of its interface, components, and C# scripting. I am also developing environments and games using the engine.'
   },
   
   {
     title: 'Unreal Engine',
     image: unreal,
-    description: 'I initially started learning Unreal Engine to create games and environments, and gained a basic understanding of its interface, Blueprints, and overall workflow. However, I had to switch due to performance issues on my laptop.'
+    description: 'I initially began learning Unreal Engine to create games and environments, gaining basic proficiency with its interface, Blueprints, and workflow. I had to pause further learning due to performance limitations on my laptop.'
+  },
+
+  {
+    title: 'Gaea',
+    image: gaea,
+    description: 'This is a powerful terrain generator software that I use to create diverse terrains for many of my projects. I regularly import these terrains into Blender to enhance my scenes. I have a solid working knowledge of this software and leverage its features to efficiently produce high-quality landscapes.'
   },
   
   {
     title: 'VS Code',
     image: vscode,
-    description: `I use VS Code as my primary code editor for development, as it offers a great coding environment with powerful extensions and features. It's also open-source and lightweight, which makes it ideal for my laptop.`
+    description: 'VS Code is my primary code editor, offering a powerful and flexible development environment with a wide range of extensions and features. Its lightweight and open-source nature make it ideal for my setup.'
   },
   
   {
     title: 'Visual Studio',
     image: visualStudio,
-    description: `I previously used Visual Studio for C++ development, but I now prefer VS Code because Visual Studio is quite heavy for my laptop. I used it to develop a game using the Raylib library in C++, which automatically compiles and links all the necessary files and libraries to run the game.`
+    description: 'I previously used Visual Studio for C++ development and created a game using the Raylib library. Though I now prefer VS Code for its lighter footprint, I appreciate Visual Studio’s robust compilation and debugging tools.'
   },
   
   {
     title: 'Git and GitHub',
     image: git,
-    description: 'I use Git and GitHub for version control in my projects. I have a basic understanding of Git commands and how to manage repositories on GitHub.'
+    description: 'I use Git and GitHub for version control in my projects. I have a basic understanding of Git commands and repository management on GitHub.'
   },
   
   {
     title: 'Flax',
     image: flax,
-    description: `I recently started learning Flax Engine, which is essentially a lightweight alternative to Unreal Engine. I've been exploring it to create games and environments, and have a basic understanding of its interface and components.`
+    description: 'I am currently exploring Flax Engine, a lightweight alternative to Unreal Engine. I have a basic understanding of its interface and components and am using it to experiment with game and environment creation.'
   },
 ];
+
 
 const About = () => {
    const skillSectionRef = useRef(null);
@@ -241,15 +249,16 @@ const About = () => {
             About Me
           </h2>
           <p className="text-lg leading-relaxed">
-            Hi, I'm <span className="font-semibold">Dhruv</span>, a 3D environment artist and 3D artist. I started working as a 3D artist as a hobby about 5 years ago and have learned a lot about 3D art and computer graphics since then. I have been using Blender for almost 5 years and have created many environment scenes and 3D models. I have learned everything I know about 3D art and computer graphics through YouTube videos, online courses, and my own experimentation. I have a passion for creating realistic and immersive 3D environments, and I love the challenge of bringing my ideas to life through 3D art.
+            Hi, I'm <span className="font-semibold">Dhruv</span>, a passionate 3D Environment Artist and 3D Artist. I began exploring 3D art as a hobby about five years ago and have since developed a deep understanding of 3D art and computer graphics. Over the years, I’ve used <span className="font-semibold">Blender</span> extensively, creating a wide range of immersive environment scenes and detailed 3D models. I am a self-taught artist, having acquired my skills through YouTube tutorials, online courses, and hands-on experimentation. I am driven by a love for crafting realistic and atmospheric 3D environments and enjoy the creative challenge of bringing ideas to life through art.
           </p>
           <p className="text-lg leading-relaxed mt-4">
-            Right now, I am a student at <span className="font-semibold">Government Engineering College Bhavnagar</span>, pursuing a Bachelor of Engineering degree in Electronics and Communication. Through college, I have learned programming languages like <span className="font-semibold"> C, C++, Python, and JavaScript.</span> By learning these languages, I gained insight into computer graphics, how 3D rendering is done behind the scenes, and how real-time rendering works in games. This inspired me to start learning game development and the basic concepts using <span className="font-semibold">Unreal, Godot, and Unity</span>, as well as some game development frameworks like <span className="font-semibold">Raylib</span>. I have also created some games using these tools and learned the basic concepts of OpenGL.
+            Currently, I am pursuing a <span className="font-semibold">Bachelor of Engineering</span> degree in <span className="font-semibold">Electronics and Communication</span> at Government Engineering College Bhavnagar. Through my academic journey, I’ve gained experience with programming languages such as <span className="font-semibold">C, C++, Python,</span> and <span className="font-semibold">JavaScript</span>. Learning these languages has given me valuable insights into computer graphics, the fundamentals of 3D rendering, and the mechanics of real-time graphics in games. This knowledge inspired me to delve into game development, where I have explored tools and engines like <span className="font-semibold">Unreal Engine, Godot, Unity,</span> and frameworks such as <span className="font-semibold">Raylib</span>. I’ve also developed a few games using these tools and gained a basic understanding of <span className="font-semibold">OpenGL</span>.
           </p>
           <p className="text-lg leading-relaxed mt-4">
-            Although I have learned a lot, my main passion is creating stunning 3D environments. I have started making environments for games in engines and have also begun developing games as a solo developer in Unity.
+            While I continuously learn and explore new areas, my primary passion remains in creating stunning 3D environments. I have recently started designing environments for games within various game engines and have begun developing games as a solo developer using <span className="font-semibold">Unity</span>.
           </p>
         </div>
+
 
         {/* Skills Section */}
         <section ref={skillSectionRef} className="relative py-20">
