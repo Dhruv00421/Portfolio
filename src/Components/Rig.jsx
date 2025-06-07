@@ -11,6 +11,18 @@ function Rig({ height = -0.5 }) {
   const [isDragging, setIsDragging] = useState(false);
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
   const [dragDistance, setDragDistance] = useState(0);
+  const [radius, setRadius] = useState(3.4);
+
+   useEffect(() => {
+    const updateRadius = () => {
+      const isMobile = window.innerWidth < 768;
+      setRadius(isMobile ? 2.7 : 3.4);  // Adjust smaller for mobile
+    };
+
+    updateRadius();
+    window.addEventListener('resize', updateRadius);
+    return () => window.removeEventListener('resize', updateRadius);
+  }, []);
 
   useEffect(() => {
     const handlePointerDown = (e) => {
@@ -70,7 +82,7 @@ function Rig({ height = -0.5 }) {
 
   return (
     <group ref={ref} position={[0, height, 0]}>
-      <Carousel />
+      <Carousel radius={radius} />
     </group>
   );
 }

@@ -9,6 +9,15 @@ import arrow from "../assets/Icons/arrow.svg";
 import { useLocation } from 'react-router-dom'
 
 const Home = () => {
+
+  const [isRotating, setIsRotating] = useState(false);
+  const [isDragging, setIsDragging] = useState(false); 
+  const [currentStage, setCurrentStage] = useState(null);
+  const [onSwipeOffset, setOnSwipeOffset] = useState(null)
+  const [mouseOffset, setMouseOffset] = useState({ x: 0, y: 0 });
+  const [mouseX, setMouseX] = useState(0);
+  const [visibleStage, setVisibleStage] = useState(null);
+  
   const [cubeProps, setCubeProps] = useState({
     scale: [1, 1, 1],
     position: [0, -0.3, 2],
@@ -19,7 +28,7 @@ const Home = () => {
     const isMobile = window.innerWidth < 768;
     setCubeProps({
       scale: isMobile ? [0.9, 0.9, 0.9] : [1, 1, 1],
-      position: [0, -0.3, 2],
+      position: isMobile ? [0, -0.2, 1.5] : [0, -0.3, 2],
       rotation: [0.1, 4.7, 0],
     });
   };
@@ -30,13 +39,26 @@ const Home = () => {
     return () => window.removeEventListener('resize', updateCubeForScreenSize);
   }, []);
 
-  const [isRotating, setIsRotating] = useState(false);
-  const [isDragging, setIsDragging] = useState(false); 
-  const [currentStage, setCurrentStage] = useState(null);
-  const [onSwipeOffset, setOnSwipeOffset] = useState(null)
-  const [mouseOffset, setMouseOffset] = useState({ x: 0, y: 0 });
-  const [mouseX, setMouseX] = useState(0);
-  const [visibleStage, setVisibleStage] = useState(null);
+
+  const [floatingProps, setFloatingProps] = useState({
+    count: 30,
+    radius: 3
+  });
+
+  const updateFloatingProps = () => {
+    const isMobile = window.innerWidth < 768;
+    setFloatingProps({
+      count: isMobile ? 10 : 30,
+      radius: isMobile ? 2 : 3
+    });
+  };
+
+  useEffect(() => {
+    updateFloatingProps();
+    window.addEventListener('resize', updateFloatingProps);
+    return () => window.removeEventListener('resize', updateFloatingProps);
+  }, []);
+
   
   const location = useLocation()
   const isRoot = location.pathname === '/'
@@ -72,7 +94,7 @@ const Home = () => {
 
   return (
     <motion.section 
-      className='w-full h-screen pt-16 relative bg-[#FAFAFA] 
+      className='w-full min-h-screen h-[100dvh] pt-16 relative bg-[#FAFAFA] 
       sm:pt-20 md:pt-24 lg:pt-28 xl:pt-32'  // Responsive padding top
       initial="initial"
       animate="animate"
@@ -80,10 +102,7 @@ const Home = () => {
       variants={pageVariants}
       transition={{ duration: 0.5 }}
     > 
-      <div className='absolute bottom-20 left-1/12 sm:left-16 md:left-20 lg:left-24 flex items-center gap-2 text-black font-medium text-xs sm:text-sm md:text-base'>
-        Swipe For more
-        <img src={arrow} alt='arrow' className='w-4 h-4 object-contain' />
-      </div>
+      
       
       <Canvas
         gl={{ toneMapping: useThree.ACESFilmicToneMapping }}
@@ -97,8 +116,8 @@ const Home = () => {
           <hemisphereLight skyColor="#b1e1ff" groundColor="#000000" intensity={1} />
 
           <FloatingCubes 
-            count={30} 
-            radius={3} 
+            count={floatingProps.count} 
+            radius={floatingProps.radius} 
             height={0.2} 
             directionOffset={mouseOffset}
           />
@@ -119,6 +138,11 @@ const Home = () => {
           />
         </Suspense>
       </Canvas>
+
+      <div className='absolute bottom-8 sm:bottom-12 md:bottom-16 lg:bottom-20 left-1/12 sm:left-16 md:left-20 lg:left-24 flex items-center gap-2 text-black font-medium text-xs sm:text-sm md:text-base'>
+        Swipe For more
+        <img src={arrow} alt='arrow' className='w-4 h-4 object-contain' />
+      </div>
 
       {!isRoot && (
         <motion.div 
