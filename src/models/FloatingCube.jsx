@@ -52,22 +52,33 @@ const FloatingCubes = ({
 
 
   const handleTouchStart = (e) => {
+    e.preventDefault()
     isDragging.current = true
     lastX.current = e.touches[0].clientX
+    direction.current = 0 // Reset direction on new touch
   }
 
   const handleTouchMove = (e) => {
+    e.preventDefault()
     if (!isDragging.current) return
 
     const clientX = e.touches[0].clientX
     const deltaX = clientX - lastX.current
-    direction.current = -deltaX * 0.002 // same as desktop
+    // Increase sensitivity for mobile
+    direction.current = -deltaX * 0.005
     lastX.current = clientX
+
+    // Update mouse position for smooth movement
+    const rect = gl.domElement.getBoundingClientRect()
+    const x = ((clientX - rect.left) / rect.width) * 2 - 1
+    setMouse(prev => ({ ...prev, x }))
   }
 
-  const handleTouchEnd = () => {
+  const handleTouchEnd = (e) => {
+    e.preventDefault()
     isDragging.current = false
-    direction.current = 0 // optional: reset direction, or let inertia continue
+    // Add some inertia to the movement
+    direction.current *= 0.5
   }
 
   
@@ -81,10 +92,10 @@ const FloatingCubes = ({
     canvas.addEventListener('pointermove', handlePointerMove)
 
     // Mobile touch events
-    canvas.addEventListener('touchstart', handleTouchStart)
-    canvas.addEventListener('touchmove', handleTouchMove)
-    canvas.addEventListener('touchend', handleTouchEnd)
-    canvas.addEventListener('touchcancel', handleTouchEnd)
+    canvas.addEventListener('touchstart', handleTouchStart, { passive: false })
+    canvas.addEventListener('touchmove', handleTouchMove, { passive: false })
+    canvas.addEventListener('touchend', handleTouchEnd, { passive: false })
+    canvas.addEventListener('touchcancel', handleTouchEnd, { passive: false })
 
     return () => {
       canvas.removeEventListener('pointerdown', handlePointerDown)
@@ -106,10 +117,16 @@ const FloatingCubes = ({
       for (let i = 0; i < count; i++) {
         angleOffsets.current[i] += direction.current
       }
-    }
-
-    if (!isDragging.current) {
-      direction.current *= 0.95 // damping
+    } else {
+      // Apply inertia when not dragging
+      if (Math.abs(direction.current) > 0.0001) {
+        for (let i = 0; i < count; i++) {
+          angleOffsets.current[i] += direction.current
+        }
+        direction.current *= 0.95 // damping
+      } else {
+        direction.current = 0
+      }
     }
 
     const smoothMouseX = mouse.x * 0.2
