@@ -27,35 +27,55 @@ const FloatingCubes = ({
   const isDragging = useRef(false)
   const lastX = useRef(0)
   const [mouse, setMouse] = useState({ x: 0, y: 0 })
+  const touchStartTime = useRef(0)
+  const touchStartX = useRef(0)
+  const velocity = useRef(0)
+  const isMobile = useRef(window.innerWidth < 768)
+  const lastDeltaX = useRef(0)
+  const currentRotation = useRef(0)
 
   const handlePointerDown = (e) => {
     isDragging.current = true
     lastX.current = e.clientX
+    touchStartTime.current = Date.now()
+    touchStartX.current = e.clientX
+    velocity.current = 0
+    lastDeltaX.current = 0
   }
 
   const handlePointerUp = () => {
     isDragging.current = false
-    direction.current = 0
+    // Maintain the current rotation
+    currentRotation.current = angleOffsets.current[0]
+    // Apply a small velocity based on the last movement
+    velocity.current = -lastDeltaX.current * (isMobile.current ? 0.3 : 0.15)
   }
 
   const handlePointerMove = (e) => {
+    if (!isDragging.current) return
+
     const rect = gl.domElement.getBoundingClientRect()
     const x = ((e.clientX - rect.left) / rect.width) * 2 - 1
     const y = -((e.clientY - rect.top) / rect.height) * 2 + 1
     setMouse({ x, y })
 
-    if (!isDragging.current) return
     const deltaX = e.clientX - lastX.current
-    direction.current = -deltaX * 0.002
+    lastDeltaX.current = -deltaX * (isMobile.current ? 0.005 : 0.002)
+    direction.current = lastDeltaX.current
     lastX.current = e.clientX
-  }
 
+    // Update current rotation
+    currentRotation.current += direction.current
+  }
 
   const handleTouchStart = (e) => {
     e.preventDefault()
     isDragging.current = true
     lastX.current = e.touches[0].clientX
-    direction.current = 0 // Reset direction on new touch
+    touchStartTime.current = Date.now()
+    touchStartX.current = e.touches[0].clientX
+    velocity.current = 0
+    lastDeltaX.current = 0
   }
 
   const handleTouchMove = (e) => {
@@ -64,11 +84,13 @@ const FloatingCubes = ({
 
     const clientX = e.touches[0].clientX
     const deltaX = clientX - lastX.current
-    // Increase sensitivity for mobile
-    direction.current = -deltaX * 0.005
+    lastDeltaX.current = -deltaX * 0.005
+    direction.current = lastDeltaX.current
     lastX.current = clientX
 
-    // Update mouse position for smooth movement
+    // Update current rotation
+    currentRotation.current += direction.current
+
     const rect = gl.domElement.getBoundingClientRect()
     const x = ((clientX - rect.left) / rect.width) * 2 - 1
     setMouse(prev => ({ ...prev, x }))
@@ -77,11 +99,11 @@ const FloatingCubes = ({
   const handleTouchEnd = (e) => {
     e.preventDefault()
     isDragging.current = false
-    // Add some inertia to the movement
-    direction.current *= 0.5
+    // Maintain the current rotation
+    currentRotation.current = angleOffsets.current[0]
+    // Apply a small velocity based on the last movement
+    velocity.current = -lastDeltaX.current * 0.1
   }
-
-  
 
   useEffect(() => {
     const canvas = gl.domElement
@@ -97,6 +119,12 @@ const FloatingCubes = ({
     canvas.addEventListener('touchend', handleTouchEnd, { passive: false })
     canvas.addEventListener('touchcancel', handleTouchEnd, { passive: false })
 
+    // Update mobile detection on resize
+    const handleResize = () => {
+      isMobile.current = window.innerWidth < 768
+    }
+    window.addEventListener('resize', handleResize)
+
     return () => {
       canvas.removeEventListener('pointerdown', handlePointerDown)
       canvas.removeEventListener('pointerup', handlePointerUp)
@@ -106,26 +134,31 @@ const FloatingCubes = ({
       canvas.removeEventListener('touchmove', handleTouchMove)
       canvas.removeEventListener('touchend', handleTouchEnd)
       canvas.removeEventListener('touchcancel', handleTouchEnd)
+
+      window.removeEventListener('resize', handleResize)
     }
   }, [gl])
-
 
   useFrame(({ clock }) => {
     const t = clock.getElapsedTime()
 
     if (isDragging.current) {
+      // Update all cubes based on current rotation
       for (let i = 0; i < count; i++) {
-        angleOffsets.current[i] += direction.current
+        angleOffsets.current[i] = currentRotation.current + (i * (2 * Math.PI / count))
       }
     } else {
       // Apply inertia when not dragging
-      if (Math.abs(direction.current) > 0.0001) {
+      if (Math.abs(velocity.current) > 0.0001) {
+        currentRotation.current += velocity.current
+        // Update all cubes based on current rotation
         for (let i = 0; i < count; i++) {
-          angleOffsets.current[i] += direction.current
+          angleOffsets.current[i] = currentRotation.current + (i * (2 * Math.PI / count))
         }
-        direction.current *= 0.95 // damping
+        // Smoother damping
+        velocity.current *= 0.92
       } else {
-        direction.current = 0
+        velocity.current = 0
       }
     }
 
