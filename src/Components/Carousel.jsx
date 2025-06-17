@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from './Card.jsx'
+import Card from './Card'
 import { Links } from 'react-router-dom'
 
 function Carousel({ radius = 3.4, count = 4 }) {

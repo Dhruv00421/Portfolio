@@ -23,7 +23,7 @@ export default defineConfig({
       'Cross-Origin-Resource-Policy': 'cross-origin',
       'Cross-Origin-Opener-Policy': 'same-origin',
       'Access-Control-Allow-Origin': '*',
-      'Content-Type': 'application/javascript'
+      'X-Content-Type-Options': 'nosniff'
     }
   },
   build: {

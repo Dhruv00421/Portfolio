@@ -1,10 +1,10 @@
 import React, { Suspense, useState, useEffect } from 'react'
 import { Canvas, useThree } from '@react-three/fiber'
 import { motion } from 'framer-motion'
-import Loader from '../Components/Loader.jsx'
-import Cube from '../models/Cube.jsx'
-import FloatingCubes from '../models/FloatingCube.jsx'
-import Rig from '../Components/Rig.jsx'
+import Loader from '../Components/Loader'
+import Cube from '../models/Cube'
+import FloatingCubes from '../models/FloatingCube'
+import Rig from '../Components/Rig'
 import arrow from "../assets/Icons/arrow.svg"; 
 import { useLocation } from 'react-router-dom'
 

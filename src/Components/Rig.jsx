@@ -1,7 +1,7 @@
 import { useFrame, useThree } from '@react-three/fiber';
 import { easing } from 'maath';
 import React, { useEffect, useRef, useState } from 'react';
-import Carousel from './Carousel.jsx';
+import Carousel from './Carousel';
 
 const TOUCH_MULTIPLIER = 0.008; // Slightly reduced for smoother control
 const MOUSE_MULTIPLIER = 0.002;
