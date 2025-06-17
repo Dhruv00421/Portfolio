@@ -22,7 +22,8 @@ export default defineConfig({
       'Cross-Origin-Embedder-Policy': 'credentialless',
       'Cross-Origin-Resource-Policy': 'cross-origin',
       'Cross-Origin-Opener-Policy': 'same-origin',
-      'Access-Control-Allow-Origin': '*'
+      'Access-Control-Allow-Origin': '*',
+      'Content-Type': 'application/javascript'
     }
   },
   build: {
@@ -39,4 +40,7 @@ export default defineConfig({
     },
     chunkSizeWarningLimit: 1000
   },
+  resolve: {
+    extensions: ['.js', '.jsx', '.json']
+  }
 })
