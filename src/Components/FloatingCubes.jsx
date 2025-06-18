@@ -15,6 +15,10 @@ const FloatingCubes = () => {
   const [touchStartPosition, setTouchStartPosition] = useState({ x: 0, y: 0 });
   const [touchVelocity, setTouchVelocity] = useState({ x: 0, y: 0 });
   const [isAutoRotating, setIsAutoRotating] = useState(true);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [targetRotation, setTargetRotation] = useState({ x: 0, y: 0 });
+  const [isMouseMoving, setIsMouseMoving] = useState(false);
+  const [isMouseInContainer, setIsMouseInContainer] = useState(false);
   const lastTouchTime = useRef(0);
   const touchTimeout = useRef(null);
   const rotationRef = useRef({ x: 0, y: 0 });
@@ -28,6 +32,8 @@ const FloatingCubes = () => {
   const lastTouchTimeRef = useRef(0);
   const touchTimeoutRef = useRef(null);
   const rotationSpeedRef = useRef({ x: 0, y: 0 });
+  const containerRef = useRef(null);
+  const mousePositionRef = useRef({ x: 0, y: 0 });
   const dampingFactor = 0.95;
   const minSwipeDistance = 10;
   const maxRotationSpeed = 0.1;
@@ -43,6 +49,7 @@ const FloatingCubes = () => {
   const touchDistanceThreshold = 10;
   const touchVelocityThreshold = 0.001;
   const autoRotationThreshold = 0.0001;
+  const mouseSensitivity = 0.003; // Increased sensitivity for mouse movement without dragging
   const touchStartTimeRef2 = useRef(0);
   const touchStartPositionRef2 = useRef({ x: 0, y: 0 });
   const touchVelocityRef2 = useRef({ x: 0, y: 0 });
@@ -79,7 +86,8 @@ const FloatingCubes = () => {
     touchVelocityRef.current = touchVelocity;
     isAutoRotatingRef.current = isAutoRotating;
     lastTouchTimeRef.current = lastTouchTime.current;
-  }, [rotation, isDragging, touchStartTime, touchStartPosition, touchVelocity, isAutoRotating]);
+    mousePositionRef.current = mousePosition;
+  }, [rotation, isDragging, touchStartTime, touchStartPosition, touchVelocity, isAutoRotating, mousePosition, isMouseInContainer]);
 
   // Handle window resize
   useEffect(() => {
@@ -116,8 +124,8 @@ const FloatingCubes = () => {
             x: touchVelocityRef.current.x * velocityDamping,
             y: touchVelocityRef.current.y * velocityDamping
           };
-        } else if (isAutoRotatingRef.current) {
-          // Apply auto-rotation with increased speed for mobile
+        } else if (isAutoRotatingRef.current && !isMouseInContainer) {
+          // Apply auto-rotation with increased speed for mobile, but only when mouse is not in container
           setRotation(prev => ({
             x: prev.x + autoRotationSpeed * deltaTime * (isMobile ? 1.5 : 1),
             y: prev.y + autoRotationSpeed * deltaTime * (isMobile ? 1.5 : 1)
@@ -130,7 +138,7 @@ const FloatingCubes = () => {
 
     animationFrameId = requestAnimationFrame(updateRotation);
     return () => cancelAnimationFrame(animationFrameId);
-  }, [isMobile]);
+  }, [isMobile, isMouseInContainer]);
 
   const handleTouchStart = (e) => {
     e.preventDefault(); // Prevent default touch behavior
@@ -228,7 +236,27 @@ const FloatingCubes = () => {
   };
 
   const handleMouseMove = (e) => {
-    if (!isDragging) return;
+    if (!isDragging) {
+      // Handle mouse movement without dragging for floating effect
+      if (containerRef.current) {
+        const rect = containerRef.current.getBoundingClientRect();
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const mouseX = e.clientX - rect.left;
+        const mouseY = e.clientY - rect.top;
+        
+        // Calculate normalized position (-1 to 1)
+        const normalizedX = (mouseX - centerX) / centerX;
+        const normalizedY = (mouseY - centerY) / centerY;
+        
+        // Apply direct rotation based on mouse position for immediate response
+        setRotation(prev => ({
+          x: prev.x + normalizedY * 0.02, // Direct rotation based on Y position
+          y: prev.y + normalizedX * 0.02  // Direct rotation based on X position
+        }));
+      }
+      return;
+    }
     
     const currentTime = Date.now();
     const deltaTime = currentTime - lastTouchTime.current;
@@ -283,6 +311,19 @@ const FloatingCubes = () => {
     }
   };
 
+  const handleMouseEnter = () => {
+    setIsMouseInContainer(true);
+    setIsAutoRotating(false);
+  };
+
+  const handleMouseLeave = () => {
+    setIsMouseInContainer(false);
+    setIsDragging(false);
+    setTimeout(() => {
+      setIsAutoRotating(true);
+    }, 300);
+  };
+
   // Cleanup on unmount
   useEffect(() => {
     return () => {
@@ -294,13 +335,15 @@ const FloatingCubes = () => {
 
   return (
     <div
+      ref={containerRef}
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
       onMouseDown={handleMouseDown}
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
-      onMouseLeave={handleMouseUp}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
       style={{
         width: '100%',
         height: '100%',

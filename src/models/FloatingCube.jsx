@@ -52,7 +52,22 @@ const FloatingCubes = ({
   }
 
   const handlePointerMove = (e) => {
-    if (!isDragging.current) return
+    if (!isDragging.current) {
+      // Handle mouse movement without dragging for floating effect
+      const rect = gl.domElement.getBoundingClientRect();
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const mouseX = e.clientX - rect.left;
+      const mouseY = e.clientY - rect.top;
+      
+      // Calculate normalized position (-1 to 1)
+      const normalizedX = (mouseX - centerX) / centerX;
+      const normalizedY = (mouseY - centerY) / centerY;
+      
+      // Apply floating effect by updating mouse state
+      setMouse({ x: normalizedX * 0.3, y: normalizedY * 0.3 });
+      return;
+    }
 
     const rect = gl.domElement.getBoundingClientRect()
     const x = ((e.clientX - rect.left) / rect.width) * 2 - 1
@@ -112,6 +127,13 @@ const FloatingCubes = ({
     canvas.addEventListener('pointerdown', handlePointerDown)
     canvas.addEventListener('pointerup', handlePointerUp)
     canvas.addEventListener('pointermove', handlePointerMove)
+    canvas.addEventListener('pointerenter', () => {
+      // Mouse entered canvas - floating effect will be active
+    })
+    canvas.addEventListener('pointerleave', () => {
+      // Mouse left canvas - reset mouse position and resume normal behavior
+      setMouse({ x: 0, y: 0 })
+    })
 
     // Mobile touch events
     canvas.addEventListener('touchstart', handleTouchStart, { passive: false })
@@ -129,6 +151,8 @@ const FloatingCubes = ({
       canvas.removeEventListener('pointerdown', handlePointerDown)
       canvas.removeEventListener('pointerup', handlePointerUp)
       canvas.removeEventListener('pointermove', handlePointerMove)
+      canvas.removeEventListener('pointerenter', () => {})
+      canvas.removeEventListener('pointerleave', () => {})
 
       canvas.removeEventListener('touchstart', handleTouchStart)
       canvas.removeEventListener('touchmove', handleTouchMove)
@@ -162,8 +186,8 @@ const FloatingCubes = ({
       }
     }
 
-    const smoothMouseX = mouse.x * 0.2
-    const smoothMouseY = mouse.y * 0.2
+    const smoothMouseX = mouse.x * 0.5
+    const smoothMouseY = mouse.y * 0.5
 
     group.current.children.forEach((child, i) => {
       const angle = angleOffsets.current[i]
