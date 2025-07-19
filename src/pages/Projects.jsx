@@ -56,8 +56,8 @@ const projects = [
     technologies: ["Blender", "Evee Engine"],
     type: "3D Art",
     links: {
-      demo: "#",
-      github: "#",
+      
+      
       behance: "#"
     }
   },
@@ -77,8 +77,8 @@ const projects = [
     type: "3D Art",
     featured: true,
     links: {
-      demo: "#",
-      github: "#"
+      
+      
     }
   },
   {
@@ -98,8 +98,8 @@ const projects = [
     technologies: ["Blender", "Cycle Engine"],
     type: "3D Art",
     links: {
-      github: "#",
-      demo: "#"
+      
+      
     }
   },
   {
@@ -116,8 +116,8 @@ const projects = [
     technologies: ["Blender", "Cycle Engine"],
     type: "3D Art",
     links: {
-      github: "#",
-      demo: "#"
+      
+      
     }
   },
   {
@@ -138,8 +138,8 @@ const projects = [
     technologies: ["Blender", "Cycle Engine"],
     type: "3D Art",
     links: {
-      demo: "#",
-      github: "#"
+      
+      
     }
   },
   {
@@ -159,8 +159,8 @@ const projects = [
     technologies: ["Blender", "Cycle Engine"],
     type: "3D Art",
     links: {
-      demo: "#",
-      github: "#"
+      
+      
     }
   },
   
@@ -183,8 +183,8 @@ const projects = [
     technologies: ["Blender", "Cycle Engine"],
     type: "3D Art",
     links: {
-      demo: "#",
-      behance: "#"
+      
+      
     }
   },
   {
@@ -202,8 +202,8 @@ const projects = [
     technologies: ["Blender", "Cycle Engine"],
     type: "3D Art",
     links: {
-      demo: "#",
-      behance: "#"
+      
+      
     }
   },
 
@@ -223,8 +223,8 @@ const projects = [
     technologies: ["Blender", "Cycle Engine"],
     type: "3D Art",
     links: {
-      demo: "#",
-      github: "#"
+      
+      
     }
   },
   
@@ -241,8 +241,8 @@ const projects = [
     technologies: ["Blender", "Evee Engine"],
     type: "3D Art",
     links: {
-      demo: "#",
-      behance: "#"
+      
+      
     }
   },
   
@@ -259,8 +259,8 @@ const projects = [
     technologies: ["Blender", "Evee engine"],
     type: "3D Art",
     links: {
-      demo: "#",
-      behance: "#"
+      
+      
     }
   },
   
@@ -279,8 +279,8 @@ const projects = [
     technologies: ["Blender", "Cycle Engine"],
     type: "3D Art",
     links: {
-      demo: "#",
-      behance: "#"
+      
+      
     }
   },
   
@@ -296,8 +296,8 @@ const projects = [
     technologies: ["Blender", "Cycle Engine"],
     type: "3D Art",
     links: {
-      demo: "#",
-      behance: "#"
+      
+      
     }
   },
   
@@ -317,8 +317,8 @@ const projects = [
     technologies: ["Blender", "Cycle Engine"],
     type: "3D Art",
     links: {
-      demo: "#",
-      behance: "#"
+      
+      
     }
   },
   
@@ -337,8 +337,8 @@ const projects = [
     technologies: ["Blender", "Cycle Engine"],
     type: "3D Art",
     links: {
-      demo: "#",
-      behance: "#"
+      
+      
     }
   },
   
@@ -356,8 +356,8 @@ const projects = [
     technologies: ["Blender", "Cycle Engine", "Unity"],
     type: "3D Art",
     links: {
-      demo: "#",
-      behance: "#"
+      
+      
     }
   },
   
@@ -375,8 +375,8 @@ const projects = [
     technologies: ["Blender", "Cycle Engine", "Unity", "Marmoset Toolbag", "RizomUV", "Godot Engine"],
     type: "3D Art",
     links: {
-      demo: "#",
-      behance: "#"
+      
+      
     }
   },
   
@@ -395,8 +395,8 @@ const projects = [
     technologies: ["Blender", "Cycle Engine", "Unity"],
     type: "3D Art",
     links: {
-      demo: "#",
-      behance: "#"
+      
+      
     }
   },
   
@@ -412,8 +412,8 @@ const projects = [
     technologies: ["Blender", "Cycle Engine", "Unity"],
     type: "Game Development",
     links: {
-      demo: "#",
-      behance: "#"
+      
+      
     }
   },
   {
@@ -428,8 +428,8 @@ const projects = [
     technologies: ["Blender", "Cycle Engine", "Unity"],
     type: "Game Development",
     links: {
-      demo: "#",
-      behance: "#"
+      
+      
     }
   },
 
