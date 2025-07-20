@@ -9,10 +9,10 @@ import instagram from '../assets/Icons/Instagram.svg';
 import linkedin from '../assets/Icons/Linkedin1.svg'
 
 // Project img
-import hostingImg from '../assets/Images/Hosting.png'
-import anomalyImg from '../assets/Images/Anomaly.png'
-import visionImg from '../assets/Images/AIVision.jpg'
-import intelImg from '../assets/Images/Intel.png'
+import hostingImg from '/Project_Images/Hosting.png'
+import anomalyImg from '/Project_Images/Anomaly.png'
+import visionImg from '/Project_Images/AIVision.jpg'
+import intelImg from '/Project_Images/Intel.png'
 
 // projects img
 // 3D environments
