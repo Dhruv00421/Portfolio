@@ -8,11 +8,6 @@ import artstation from '../assets/Icons/Artstation.svg';
 import instagram from '../assets/Icons/Instagram.svg';
 import linkedin from '../assets/Icons/Linkedin1.svg'
 
-// Project img
-import hostingImg from '/Project_Images/Hosting.png'
-import anomalyImg from '/Project_Images/Anomaly.png'
-import visionImg from '/Project_Images/AIVision.jpg'
-import intelImg from '/Project_Images/Intel.png'
 
 // projects img
 // 3D environments
@@ -445,9 +440,9 @@ const projects = [
     title: "Hosting site",
     category: "Web Dev",
     description: "A simple static website built using HTML and CSS. This project helped me understand the basics of web development and how to host a site using GitHub Pages.",
-    image: hostingImg,
+    image: "https://ik.imagekit.io/Dhruv/Project_Images/Hosting.png?updatedAt=1753012851042",
     images: [
-      hostingImg,
+      "https://ik.imagekit.io/Dhruv/Project_Images/Hosting.png?updatedAt=1753012851042",
     ],
     technologies: ["VSCode", "Github"],
     type: "Web Dev",
@@ -463,9 +458,9 @@ const projects = [
     title: "Anomaly Detection",
     category: "AI/ML",
     description: "An AI-based anomaly detection system for identifying defects in manufactured goods. This project uses a trained machine learning model to analyze and flag anomalies in product visuals. The web app is built with Streamlit and deployed for live testing, showcasing practical application of AI in quality control.",
-    image: anomalyImg,
+    image: "https://ik.imagekit.io/Dhruv/Project_Images/Anomaly.png?updatedAt=1753012849334",
     images: [
-      anomalyImg,
+      "https://ik.imagekit.io/Dhruv/Project_Images/Anomaly.png?updatedAt=1753012849334",
     ],
     technologies: ["Pycharm", "GitHub", "Streamlit", "Python"],
     type: "AI/ML",
@@ -480,9 +475,9 @@ const projects = [
     title: "AI Vision",
     category: "IOT",
     description: "A team-based project where we developed an AI-powered vision system using the ESP32-CAM module to detect and analyze anomalies in real-time. The system captures product visuals, processes them through a trained AI model, and integrates the ChatGPT API for intelligent responses. This project demonstrates the fusion of embedded systems and AI for smart industrial inspection.",
-    image: visionImg,
+    image: "https://ik.imagekit.io/Dhruv/Project_Images/AIVision.jpg?updatedAt=1753012850348",
     images: [
-      visionImg,
+      "https://ik.imagekit.io/Dhruv/Project_Images/AIVision.jpg?updatedAt=1753012850348",
     ],
     technologies: ["ESP-32 CAM", "C++", "ChatGpt API", "Arduino IDE"],
     type: "IOT",
@@ -497,9 +492,9 @@ const projects = [
     title: "Demand based Inventory Management system",
     category: "AI/ML",
     description: "A team-based project aimed at optimizing inventory management using AI. The system predicts product demand based on historical data and automates stock level decisions to reduce overstock and shortages. Built with Python and Streamlit, this solution demonstrates the practical application of machine learning in supply chain and inventory control.",
-    image: intelImg,
+    image: "https://ik.imagekit.io/Dhruv/Project_Images/Intel.png?updatedAt=1753012849199",
     images: [
-      intelImg,
+      "https://ik.imagekit.io/Dhruv/Project_Images/Intel.png?updatedAt=1753012849199",
     ],
     technologies: ["Pycharm", "Streamlit", "Python"],
     type: "AI/ML",
