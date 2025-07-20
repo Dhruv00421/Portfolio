@@ -1,12 +1,18 @@
 import React, { useState, useRef } from 'react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
-import { ExternalLink, Github, Eye, Code, Palette, Gamepad2, Globe, Zap, Instagram } from 'lucide-react';
+import { ExternalLink, Github, Eye, Code, Palette, Gamepad2, Globe, Zap, Instagram, Bot, Box, Microchip } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 
 // icons
 import artstation from '../assets/Icons/Artstation.svg';
 import instagram from '../assets/Icons/Instagram.svg';
 import linkedin from '../assets/Icons/Linkedin1.svg'
+
+// Project img
+import hostingImg from '../assets/Images/Hosting.png'
+import anomalyImg from '../assets/Images/Anomaly.png'
+import visionImg from '../assets/Images/AIVision.jpg'
+import intelImg from '../assets/Images/Intel.png'
 
 // projects img
 // 3D environments
@@ -239,7 +245,7 @@ const projects = [
       "https://res.cloudinary.com/dthacqaj3/image/upload/v1749040818/Swordworkbench_q6pnox.png"
     ],
     technologies: ["Blender", "Evee Engine"],
-    type: "3D Art",
+    type: "3D Models",
     links: {
       
       
@@ -257,7 +263,7 @@ const projects = [
       "https://res.cloudinary.com/dthacqaj3/image/upload/v1749040778/Arc_workbench_zaogcq.png",
     ],
     technologies: ["Blender", "Evee engine"],
-    type: "3D Art",
+    type: "3D Models",
     links: {
       
       
@@ -277,7 +283,7 @@ const projects = [
       "https://res.cloudinary.com/dthacqaj3/image/upload/v1749040799/Gun03_xap4nz.jpg",
     ],
     technologies: ["Blender", "Cycle Engine"],
-    type: "3D Art",
+    type: "3D Models",
     links: {
       
       
@@ -294,7 +300,7 @@ const projects = [
       "https://res.cloudinary.com/dthacqaj3/image/upload/v1749040832/Arm_jjanzw.png"
     ],
     technologies: ["Blender", "Cycle Engine"],
-    type: "3D Art",
+    type: "3D Models",
     links: {
       
       
@@ -315,7 +321,7 @@ const projects = [
       "https://res.cloudinary.com/dthacqaj3/image/upload/v1749040826/Machine_2_Clay_xysl1n.png",
     ],
     technologies: ["Blender", "Cycle Engine"],
-    type: "3D Art",
+    type: "3D Models",
     links: {
       
       
@@ -335,7 +341,7 @@ const projects = [
       "https://res.cloudinary.com/dthacqaj3/image/upload/v1749040802/Saregama_Clay_ybqbgd.png",
     ],
     technologies: ["Blender", "Cycle Engine"],
-    type: "3D Art",
+    type: "3D Models",
     links: {
       
       
@@ -354,7 +360,7 @@ const projects = [
       "https://res.cloudinary.com/dthacqaj3/image/upload/v1749040760/Assault_Clay_xyppjv.png",
     ],
     technologies: ["Blender", "Cycle Engine", "Unity"],
-    type: "3D Art",
+    type: "3D Models",
     links: {
       
       
@@ -373,7 +379,7 @@ const projects = [
       "https://res.cloudinary.com/dthacqaj3/image/upload/v1749040815/StorageBox_2_igspkz.png",
     ],
     technologies: ["Blender", "Cycle Engine", "Unity", "Marmoset Toolbag", "RizomUV", "Godot Engine"],
-    type: "3D Art",
+    type: "3D Models",
     links: {
       
       
@@ -393,7 +399,7 @@ const projects = [
       "https://res.cloudinary.com/dthacqaj3/image/upload/v1749040829/Robot_main_Clay_zxwp97.png",
     ],
     technologies: ["Blender", "Cycle Engine", "Unity"],
-    type: "3D Art",
+    type: "3D Models",
     links: {
       
       
@@ -412,10 +418,11 @@ const projects = [
     technologies: ["Blender", "Cycle Engine", "Unity"],
     type: "Game Development",
     links: {
-      
+      github: "https://github.com/Dhruv00421/Ping-pong-ball.git"
       
     }
   },
+  
   {
     id: 20,
     title: "Mini Knight Game",
@@ -428,8 +435,77 @@ const projects = [
     technologies: ["Blender", "Cycle Engine", "Unity"],
     type: "Game Development",
     links: {
+      github: "https://github.com/Dhruv00421/Knight-godot-game.git"
       
+    }
+  },
+
+  {
+    id: 21,
+    title: "Hosting site",
+    category: "Web Dev",
+    description: "A simple static website built using HTML and CSS. This project helped me understand the basics of web development and how to host a site using GitHub Pages.",
+    image: hostingImg,
+    images: [
+      hostingImg,
+    ],
+    technologies: ["VSCode", "Github"],
+    type: "Web Dev",
+    links: {
+      demo: "https://dhruv00421.github.io/Hosting/",
+      github: "https://github.com/Dhruv00421/Hosting.git"
       
+    }
+  },
+
+  {
+    id: 22,
+    title: "Anomaly Detection",
+    category: "AI/ML",
+    description: "An AI-based anomaly detection system for identifying defects in manufactured goods. This project uses a trained machine learning model to analyze and flag anomalies in product visuals. The web app is built with Streamlit and deployed for live testing, showcasing practical application of AI in quality control.",
+    image: anomalyImg,
+    images: [
+      anomalyImg,
+    ],
+    technologies: ["Pycharm", "GitHub", "Streamlit", "Python"],
+    type: "AI/ML",
+    links: {
+      demo: "https://tile-anomaly-detection.streamlit.app/",
+      github: "https://github.com/Dhruv00421/Anomaly_detection.git"
+    }
+  },
+  
+  {
+    id: 23,
+    title: "AI Vision",
+    category: "IOT",
+    description: "A team-based project where we developed an AI-powered vision system using the ESP32-CAM module to detect and analyze anomalies in real-time. The system captures product visuals, processes them through a trained AI model, and integrates the ChatGPT API for intelligent responses. This project demonstrates the fusion of embedded systems and AI for smart industrial inspection.",
+    image: visionImg,
+    images: [
+      visionImg,
+    ],
+    technologies: ["ESP-32 CAM", "C++", "ChatGpt API", "Arduino IDE"],
+    type: "IOT",
+    links: {
+      // demo: "https://tile-anomaly-detection.streamlit.app/",
+      github: "https://github.com/Dhruv00421/Ai-Vision.git"
+    }
+  },
+  
+  {
+    id: 24,
+    title: "Demand based Inventory Management system",
+    category: "AI/ML",
+    description: "A team-based project aimed at optimizing inventory management using AI. The system predicts product demand based on historical data and automates stock level decisions to reduce overstock and shortages. Built with Python and Streamlit, this solution demonstrates the practical application of machine learning in supply chain and inventory control.",
+    image: intelImg,
+    images: [
+      intelImg,
+    ],
+    technologies: ["Pycharm", "Streamlit", "Python"],
+    type: "AI/ML",
+    links: {
+      demo: "https://intel-ai-project.streamlit.app/",
+      github: "https://github.com/Dhruv00421/intel-ai-project.git"
     }
   },
 
@@ -450,13 +526,16 @@ const projects = [
   // },
 ];
 
-const categories = ["All", "3D Environment", "3D Models", "Games"];
+const categories = ["All", "3D Environment", "3D Models", "Games", "Web Dev", "IOT", "AI/ML"];
 
 const typeIcons = {
   "3D Art": Palette,
+  "3D Models": Box,
   "Game Development": Gamepad2,
   "Programming": Code,
-  "Web Development": Globe
+  "Web Dev": Globe,
+  "IOT": Microchip,
+  "AI/ML": Bot
 };
 
 const Projects = () => {
